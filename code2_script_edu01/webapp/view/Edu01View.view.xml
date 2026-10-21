@@ -1,0 +1,6 @@
+<mvc:View controllerName="code2.script.edu01.code2scriptedu01.controller.Edu01View"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    </Page>
+</mvc:View>
