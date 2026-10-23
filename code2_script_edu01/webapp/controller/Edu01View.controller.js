@@ -171,7 +171,36 @@ sap.ui.define([
 
             console.log("---------- oData.key 는 접근이 안되지만 oData[key] 로는 접근 가능 ---------");
             for (const key in oData) {
-                console.log( "oData[ " + key + " ] : " + oData[key] );                                    
+                console.log( "oData[ " + key + " ] : " + oData[key] );
+            
+            }
+
+            console.log("---------- 실습 --------- ");
+            // oModel 에서 key 가 Class 가 아닌 것들만 나오도록 하기.
+
+            console.log("---------- if 조건문을 넣어서 해보기. ----------");
+
+            for ( const key in oModel )
+            {
+                if ( key != "Class" )
+                {
+                    console.log(key);
+                }
+            }
+
+            console.log("---------- switch 를 넣어서 해보기 ---------- ");
+            
+            // 풀 때에 default 를 생각하지 못한 문제. 
+            for ( const key in oModel )
+            {
+                switch (key)
+                {
+                    case "Class":
+                        break;
+
+                    default:
+                        console.log(oModel[key]);
+                }
             }
 
             // 다음 시간에 JSON + Array. 
