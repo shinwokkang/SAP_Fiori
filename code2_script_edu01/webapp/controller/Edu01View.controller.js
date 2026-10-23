@@ -175,10 +175,10 @@ sap.ui.define([
             
             }
 
-            console.log("---------- 실습 --------- ")
+            console.log("---------- 실습 --------- ");
             // oModel 에서 key 가 Class 가 아닌 것들만 나오도록 하기.
 
-            console.log("---------- if 조건문을 넣어서 해보기. ----------")
+            console.log("---------- if 조건문을 넣어서 해보기. ----------");
 
             for ( const key in oModel )
             {
@@ -188,7 +188,7 @@ sap.ui.define([
                 }
             }
 
-            console.log("---------- switch 를 넣어서 해보기 ---------- ")
+            console.log("---------- switch 를 넣어서 해보기 ---------- ");
             
             // 풀 때에 default 를 생각하지 못한 문제. 
             for ( const key in oModel )
