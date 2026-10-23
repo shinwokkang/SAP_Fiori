@@ -146,21 +146,21 @@ sap.ui.define([
                             Area : "서울",
                             Mascot: "Bear",
                             Stadium: "잠실구장",
-            }
+            };
 
             console.log(
                 'oData["Team"] : ' + oData["Team"] +
                 ' / oData["Area"] : ' + oData["Area"] +
                 ' / oData["Mascot"] : ' + oData["Mascot"] +
                 ' / oData["Stadium"] : ' + oData["Stadium"]
-            )
+            );
 
             console.log(
                 'oData.Team : ' + oData.Team +
                 ' / oData.Area : ' + oData.Area +
                 ' / oData.Mascot : ' + oData.Mascot +
                 ' / oData.Stadium: ' + oData.Stadium
-            )
+            );
 
 
              console.log("---------JSON + For Loop. ------------");            
@@ -169,7 +169,7 @@ sap.ui.define([
                 console.log( "key : "  + key );        
             }
 
-            console.log("---------- oData.key 는 접근이 안되지만 oData[key] 로는 접근 가능 ---------")
+            console.log("---------- oData.key 는 접근이 안되지만 oData[key] 로는 접근 가능 ---------");
             for (const key in oData) {
                 console.log( "oData[ " + key + " ] : " + oData[key] );                                    
             }
