@@ -115,7 +115,67 @@ sap.ui.define([
                 }
             }
 
+            // JSON.
+            // Script 에서 만들 때에는 key 에 "" 필요없지만, JOSN으로 만들 때 key에 "" 필요.
 
+            console.log("---------------------");
+            console.log("---------JSON ------------");
+            console.log("---------------------");
+
+            let oModel = {
+                            Lecture : "Code 2",
+                            Class   : "CL1",
+                            Number : 1, 
+                        };
+            
+            console.log("oModel.Lecture : "  + oModel.Lecture + " , oModel.Class :  " + oModel.Class);
+            console.log("Number Type: " + typeof(oModel.Number) + ",  Number Value : " + oModel.Number );
+
+            console.log("---------JSON 식별키로 가져오기. ------------");            
+            
+            console.log(
+                "oModel[Lecture] : " + oModel["Lecture"] +  
+                " /  oModel[Class] : " + oModel["Class"] + 
+                " /  oModel[Number] : " + oModel.Number
+            );
+
+
+            // 실습
+            let oData = {
+                            Team : "두산",
+                            Area : "서울",
+                            Mascot: "Bear",
+                            Stadium: "잠실구장",
+            };
+
+            console.log(
+                'oData["Team"] : ' + oData["Team"] +
+                ' / oData["Area"] : ' + oData["Area"] +
+                ' / oData["Mascot"] : ' + oData["Mascot"] +
+                ' / oData["Stadium"] : ' + oData["Stadium"]
+            );
+
+            console.log(
+                'oData.Team : ' + oData.Team +
+                ' / oData.Area : ' + oData.Area +
+                ' / oData.Mascot : ' + oData.Mascot +
+                ' / oData.Stadium: ' + oData.Stadium
+            );
+
+
+             console.log("---------JSON + For Loop. ------------");            
+
+            for (const key in oData) {
+                console.log( "key : "  + key );        
+            }
+
+            console.log("---------- oData.key 는 접근이 안되지만 oData[key] 로는 접근 가능 ---------");
+            for (const key in oData) {
+                console.log( "oData[ " + key + " ] : " + oData[key] );                                    
+            }
+
+            // 다음 시간에 JSON + Array. 
+            // 최종적으로는 ABAP의 internal Table을 배우고자 함.
         }
     });
 });
