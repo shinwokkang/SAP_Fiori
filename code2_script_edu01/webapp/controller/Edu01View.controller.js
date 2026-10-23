@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- 콘솔 출력으로 결과를 확인하는 실습 파일 */
 sap.ui.define([
     "sap/ui/core/mvc/Controller"
 ], (Controller) => {
@@ -9,21 +10,21 @@ sap.ui.define([
             let aValue = ['A', 'B', 'C', 'D'] ;
             
             console.log("init aValue : " + aValue);
-            console.log("----------------")
+            console.log("----------------");
 
             aValue.push('E', 2);
             console.log("aValue.push('E', 2) : " + aValue);
-            console.log("----------------")
+            console.log("----------------");
 
             let popValue = aValue.pop();
             console.log("aValue.pop(); : " + popValue);
             console.log("aValue : " + aValue );
-            console.log("----------------")
+            console.log("----------------");
 
             for (const vIndex in aValue) {
                 console.log(" vIndex , aValue[vIndex] = " + vIndex + " , " + aValue[vIndex]);
             }
-            console.log("----------------")
+            console.log("----------------");
 
             for (const vData of aValue) {
                 console.log(" vData : " + vData );
@@ -51,11 +52,11 @@ sap.ui.define([
                 }
             }
 
-            console.log("---------------------")
-            console.log("---------------------")
-            console.log("------ Multi Array 실습 -------")
-            console.log("---------------------")
-            console.log("---------------------")
+            console.log("---------------------");
+            console.log("---------------------");
+            console.log("------ Multi Array 실습 -------");
+            console.log("---------------------");
+            console.log("---------------------");
             
             // 실습
             let aTeam = [
@@ -69,18 +70,18 @@ sap.ui.define([
                 ['NC',    'RNAK8'],
                 ['한화',   'RANK9'],
                 ['키움',   'RANK10']
-            ]
+            ];
 
 
 
-            console.log("----------Index 출력 -----------")
+            console.log("----------Index 출력 -----------");
 
             for (const i in aTeam) 
             {
                     console.log( aTeam[i][0] + " : " + aTeam[i][1]);
             }
 
-            console.log("---------for in 2중 출력 ------------")            
+            console.log("---------for in 2중 출력 ------------");
 
             for (const i in aTeam) 
             {
@@ -90,7 +91,7 @@ sap.ui.define([
                 }
             }
 
-            console.log("-------- 거꾸로 출력하기 -------------")
+            console.log("-------- 거꾸로 출력하기 -------------");
             
             let vNum = aTeam.length; // 10
             for ( vNum ; vNum >= 1 ; vNum-- )
@@ -102,7 +103,7 @@ sap.ui.define([
                 }
             }
 
-            console.log("---------for of 출력 ------------")            
+            console.log("---------for of 출력 ------------");
             
             for ( const aVirtaulArray of aTeam )
             {
