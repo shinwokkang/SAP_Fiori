@@ -59,7 +59,8 @@ sap.ui.define([
              * 여기에서 oText1.setTextAlign 을 호출해서
              * 매개변수에 "Right" 를 준다.
              */
-            let oText1 =  this.getView().byId("TxT1") // document.getElementById(" "), 신기하게 . 누를 때 관련 함수들이 안나오네 .. 또한 이 문장의 의미는 View의 <Text id = "TxT1"> 을 부른 것과 동일
+            let oText1 =  this.getView().byId("TxT1"); // document.getElementById(" "), 신기하게 . 누를 때 관련 함수들이 안나오네 .. 또한 이 문장의 의미는 View의 <Text id = "TxT1"> 을 부른 것과 동일
+            // eslint-disable-next-line no-console -- byId가 돌려주는 컨트롤 객체 확인용
             console.log(oText1);
 
             oText1.setTextAlign(sap.ui.core.TextAlign.Right); // 원래는 이렇게 사용하는 것이 맞다고 하심.
