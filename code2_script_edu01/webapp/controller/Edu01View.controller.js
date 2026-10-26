@@ -327,8 +327,128 @@ sap.ui.define([
                 }
             }
 
+            console.log("------------------ 26. 10. 26 ----------------------");
+            console.log("------------------ 26. 10. 26 ----------------------");
+            
             // 다음 시간에 JSON + Array. 
             // 최종적으로는 ABAP의 internal Table을 배우고자 함.
+
+            let oTeam = [
+                {Team : "KT", Rank : "1위"},
+                {Team : "삼성", Rank : "2위"},
+                {Team : "KIA", Rank : "3위"},
+                {Team : "LG", Rank : "4위"},
+                {Team : "두산", Rank : "4위"},
+            ];
+
+            for ( let i in oTeam )
+            {
+                // console.log( i );
+                console.log( oTeam[i] ); // 배열이니까 i는 0, 1, 2, 3, .. number로 나옴.
+
+                /**
+                 * console.log ( oTema[i][Team] ) // Team 이 Could not find 가 나옴. Team 이라는 주소 값을 줘야함. 왜 Could not find가 나오는 지 명확하게 알 것.
+                 * console.log ( oTeam[i]["Team"]) // Team 의 값을 명확하게 줘야함.
+                 * console.log ( oTeam[i].Team); // . 은 oTeam[i] 내의 key 값을 변수로 인식할 수 있음. 내포하고 있는 값을 가지고 옴.
+                 */
+                
+                for ( let j in oTeam[i] ){
+                    // 변수이므로 .. 그러나 이 때에는 oTeam[i].j 는 안됨. 되나?
+                    console.log( oTeam[i][j] );
+                    /**
+                     * console.log( oTeam[i].j ); // j 라는 변수를 찾으므로 (즉, 여기서의 j 는 Team, Rank가 아니게 됨.) undefined가 나옴.
+                     */                
+                }
+            }
+
+            console.log("-------------- JSON이 포함된 배열 + for of -------------------");
+
+            for (const element of oTeam) 
+            {
+                console.log(element); // for in 과 다르게 for of 는 JSON 형식을 그대로 가져옴.
+                console.log('element["Team"] : '+ element["Team"] + ' / element["RANK"] : ' + element["Rank"]);
+                console.log('element.Team : ' + element.Team + ' / element.Rank : ' + element.Rank );
+            }
+
+
+            /**
+             * JSON 이 포함된 배열의 for in 과 for of 에 대한 실습
+             */
+
+            console.log("===============================================================");
+            console.log("========================for in =======================================");
+
+
+            let oLocate = 
+            [
+                {Country : "대한민국",  Capital : "서울 "},
+                {Country : "미국",      Capital : "워싱턴 "},
+                {Country : "영국",      Capital : "런던 "},
+                {Country : "프랑스",    Capital : "파리 "},
+                {Country : "독일",      Capital : "베를린 "}
+            ];
+
+            for ( const vIndex in oLocate )
+            {
+                console.log(oLocate[vIndex]);
+                for ( const vKey in oLocate[vIndex] )
+                {
+                    console.log("oLocate[" 
+                        + vIndex 
+                        + "][ "
+                        + vKey 
+                        +" ] = " 
+                        + oLocate[vIndex][vKey]);
+                }
+            }
+
+            console.log("==========================for of =====================================");
+            for ( const oJson of oLocate )
+            {
+                // console.log(vValue);
+                console.log('vValue["Country"] : ' + oJson["Country"] + ' / vValue["Capital"]' + oJson["Capital"]); // vValue[Counry], vValue[Capital] 로 사용해서 틀렸음..
+                console.log('vValue.Country : '+ oJson.Country + ' / vValue.Capital : ' + oJson.Capital);
+            }
+
+            console.log("==========================for of + in  =====================================");
+            for ( const vValue of oLocate )
+            {
+                for ( const vValue2 in vValue )
+                {
+                    // console.log("vValue 2 : " + vValue2);
+                    console.log("vValue[vValue2] : " + vValue[vValue2]);
+                }
+            }
+
+            // for of = 다중행에만 사용 가능 ( 배열 - JSON은 불가능 .)
+            console.log("===============================================================");
+            console.log("======================== JSON이 포함된 배열의 이중 for 으로 접근  ==================================");
+            for (const oJson of oLocate) 
+            {
+                for (const vKey in oJson) {
+                     
+                    const element = oJson[vKey]; // oJson 은 JSON 형태.
+                    console.log(element);
+                    
+                }    
+            }
+
+            
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
         }
     });
 });
