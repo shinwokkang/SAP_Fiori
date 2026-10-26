@@ -327,8 +327,8 @@ sap.ui.define([
                 }
             }
 
-            console.log("------------------ 26. 10. 26 ----------------------")
-            console.log("------------------ 26. 10. 26 ----------------------")
+            console.log("------------------ 26. 10. 26 ----------------------");
+            console.log("------------------ 26. 10. 26 ----------------------");
             
             // 다음 시간에 JSON + Array. 
             // 최종적으로는 ABAP의 internal Table을 배우고자 함.
@@ -361,13 +361,13 @@ sap.ui.define([
                 }
             }
 
-            console.log("-------------- JSON이 포함된 배열 + for of -------------------")
+            console.log("-------------- JSON이 포함된 배열 + for of -------------------");
 
             for (const element of oTeam) 
             {
                 console.log(element); // for in 과 다르게 for of 는 JSON 형식을 그대로 가져옴.
-                console.log('element["Team"] : '+ element["Team"] + ' / element["RANK"] : ' + element["Rank"])
-                console.log('element.Team : ' + element.Team + ' / element.Rank : ' + element.Rank )
+                console.log('element["Team"] : '+ element["Team"] + ' / element["RANK"] : ' + element["Rank"]);
+                console.log('element.Team : ' + element.Team + ' / element.Rank : ' + element.Rank );
             }
 
 
@@ -375,8 +375,8 @@ sap.ui.define([
              * JSON 이 포함된 배열의 for in 과 for of 에 대한 실습
              */
 
-            console.log("===============================================================")
-            console.log("========================for in =======================================")
+            console.log("===============================================================");
+            console.log("========================for in =======================================");
 
 
             let oLocate = 
@@ -386,7 +386,7 @@ sap.ui.define([
                 {Country : "영국",      Capital : "런던 "},
                 {Country : "프랑스",    Capital : "파리 "},
                 {Country : "독일",      Capital : "베를린 "}
-            ]
+            ];
 
             for ( const vIndex in oLocate )
             {
@@ -398,31 +398,31 @@ sap.ui.define([
                         + "][ "
                         + vKey 
                         +" ] = " 
-                        + oLocate[vIndex][vKey])
+                        + oLocate[vIndex][vKey]);
                 }
             }
 
-            console.log("==========================for of =====================================")            
+            console.log("==========================for of =====================================");
             for ( const oJson of oLocate )
             {
                 // console.log(vValue);
-                console.log('vValue["Country"] : ' + oJson["Country"] + ' / vValue["Capital"]' + oJson["Capital"]) // vValue[Counry], vValue[Capital] 로 사용해서 틀렸음..
-                console.log('vValue.Country : '+ oJson.Country + ' / vValue.Capital : ' + oJson.Capital)
+                console.log('vValue["Country"] : ' + oJson["Country"] + ' / vValue["Capital"]' + oJson["Capital"]); // vValue[Counry], vValue[Capital] 로 사용해서 틀렸음..
+                console.log('vValue.Country : '+ oJson.Country + ' / vValue.Capital : ' + oJson.Capital);
             }
 
-            console.log("==========================for of + in  =====================================")            
+            console.log("==========================for of + in  =====================================");
             for ( const vValue of oLocate )
             {
                 for ( const vValue2 in vValue )
                 {
                     // console.log("vValue 2 : " + vValue2);
-                    console.log("vValue[vValue2] : " + vValue[vValue2])
+                    console.log("vValue[vValue2] : " + vValue[vValue2]);
                 }
             }
 
             // for of = 다중행에만 사용 가능 ( 배열 - JSON은 불가능 .)
-            console.log("===============================================================")
-            console.log("======================== JSON이 포함된 배열의 이중 for 으로 접근  ==================================")            
+            console.log("===============================================================");
+            console.log("======================== JSON이 포함된 배열의 이중 for 으로 접근  ==================================");
             for (const oJson of oLocate) 
             {
                 for (const vKey in oJson) {
