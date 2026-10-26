@@ -1,0 +1,80 @@
+<mvc:View 
+    controllerName="code2.fiori.edu01.code2fioriedu01.controller.Edu01View"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    >
+    
+    <Page id="page" title="{i18n>title}">
+
+        <VBox direction = "Column">
+        
+            <Text   id="TxT1"
+                    text = "Hello Code Class5" 
+                    width="100%" 
+                    wrapping="false" 
+                    textAlign="Center"
+                    renderWhitespace="true" />   <!-- 여기의 tex가 JSON의 Key로 인식하면 됨. -->
+    
+            <!-- Label tag 써서 "구트아카데미 damn!! 두껍게 나오도록" -->
+
+            <Label  text = "구트아카데미 damn!!" 
+                    width="100%"
+                    design="Bold" 
+                    textAlign="Center"
+                    wrapping="true"
+                    wrappingType="Hyphenated"
+                    
+                    >
+
+            </Label>
+
+
+        
+        </VBox>
+
+
+        <HBox 
+                width="100%"
+                alignContent="SpaceBetween"
+                justifyContent="Center"
+                renderType="Div"
+                wrap="Wrap"
+
+                >
+
+            <!-- 버튼 실습. -->
+            <Button
+                text="Text Left"
+                width="20rem"
+                type="Attention"
+                icon="sap-icon://text-align-left"
+                press="_textLeft"/>
+
+            <Button
+                text="Text Center"
+                width="20rem"
+                icon="sap-icon://text-align-center"
+                type="Attention"                
+                press="_textCenter"/>
+       
+            <Button id="Btn1"
+                text="Text Right"
+                width="20rem"
+                icon="sap-icon://text-align-right"
+                type="Attention"
+                press="_textRight" 
+                /> 
+                <!-- _textRight 의 언더바는 function 임을 나타냄, 또한 괄호가 없어도 됨. -->
+
+        
+
+         <!-- 실습 
+            1. View에 만들어진 TxT1 객체를 Center로 이동 시키는 Button을 생성할 것.
+            2. View에 만들어진 Lavel의 Text를 End로 이동시키는 버튼을 만들 것.-->   
+
+</HBox>
+
+    
+    </Page>
+
+</mvc:View>

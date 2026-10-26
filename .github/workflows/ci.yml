@@ -8,11 +8,15 @@ on:
 
 jobs:
   build:
-    name: Lint & Build
+    name: Lint & Build (${{ matrix.app }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [code2_script_edu01, code2_fiori_edu01]
     defaults:
       run:
-        working-directory: code2_script_edu01
+        working-directory: ${{ matrix.app }}
     steps:
       - uses: actions/checkout@v7
 
@@ -20,7 +24,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
-          cache-dependency-path: code2_script_edu01/package-lock.json
+          cache-dependency-path: ${{ matrix.app }}/package-lock.json
 
       - run: npm ci
       - run: npm run lint
