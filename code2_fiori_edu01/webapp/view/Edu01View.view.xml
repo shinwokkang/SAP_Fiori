@@ -88,6 +88,40 @@
 
         </HBox>
 
+
+        <HBox
+                width="100%"
+                alignContent="SpaceBetween"
+                justifyContent="Center"
+                renderType="Div"
+                wrap="Wrap">
+
+            <Button
+                    text = "Lecture : {/Lecture} / Class : {/Class}"
+                    press=".onShowHello"
+            />
+
+        </HBox>
+
+
+        <!-- 실습
+        1. View에 LAbel을 2개 그릴 것.
+        2. Controller의 onInit에 아래와 같은 Json 데이터를 만들 것.
+            {Name : "본인이름", Number: "본인번호"}
+        3. 위에서 만든 Json Data를 View에 세팅하고 1번에서 만든
+        Label에 각각 Name과 본인번호가 Json을 통해서 나오게 할 것.-->
+        <HBox
+                width="100%"
+                alignContent="SpaceBetween"
+                justifyContent="Center"
+                renderType="Div"
+                wrap="Wrap">
+            
+            <Label 
+                    text = "Name : {/Name}  / Number : {/Number}"/>
+        
+        </HBox>
+
     
     </Page>
 
