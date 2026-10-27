@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/Text",
-    "sap/m/MessageToast"
-], (Controller, Text, MessageToast) => { // 배열 안에 Controller - Text 순서니까 매개변수는 Controller - Text 순서로 작성할 것.
+    "sap/m/MessageToast",
+    "sap/ui/model/json/JSONModel"
+], (Controller, Text, MessageToast, JSONModel) => { // 배열 안에 Controller - Text 순서니까 매개변수는 Controller - Text 순서로 작성할 것.
     "use strict";
 
     
@@ -19,7 +20,38 @@ sap.ui.define([
             //     text : "Hello World"
             // }).placeAt("content");
 
-            // new sap.m.Text({ text : "Hello World" }); <= 이렇게 사용해봐도 됨.    
+            // new sap.m.Text({ text : "Hello World" }); <= 이렇게 사용해봐도 됨.   
+            
+            
+            /**
+             * ----------     "sap.ui.model.json.JSONModel" 실습 ------------
+             * https://ui5.sap.com/1.120.52/#/topic/70ef981d350a495b940640801701c409
+            */
+             // set data model on view
+             const oJson = {
+                                Lecture: "Code2",
+                                Class  : "CL1"    
+                            };
+                    
+             const oStudent = {
+                                Name  : "강신욱",
+                                Number: 1
+                               };
+
+            const oModel = new JSONModel(oJson); // class 를 사용하기 위해서는 반드시 new를 붙여줘야한다.
+            const oModel2 = new JSONModel(oStudent);
+
+            let oView = this.getView(); // View를 대신하는 instance를 만듦. (instance를 만들어서 사용하고자 함.) 얘는 new를 사용하지 않아도 되는 이유가 어떻게돼?    
+                oView.setModel(oModel); // instance를 생성해서 사용하는 방법.
+            
+                oView.setModel(oModel2); // 이렇게 setModel(oModel2) 를 하게 된다면, setModel(oModel)은 덮어쓰여진다. 즉, Lecture와 Class는 사용하지 못하게 됨.
+
+            /**
+             * instance 생성 없이 사용법.
+                this.getView().setModel(oModel); // getView로 View를 가져오고, setModel라는 Method로 oModel (JSON형태)을 View에게 알려줌.
+             */
+        
+        
         },
 
         // JSON 끼리의 데이터는 다음 키를 쓰기 위해서 구분자가 콤마.
