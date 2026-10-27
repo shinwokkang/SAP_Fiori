@@ -7,14 +7,24 @@
     <!-- VBox는 아래로 쭈욱 HBox는 옆으로 쭈욱.-->
         <VBox> 
             <HBox>
-                <Text text="{/Study/Lecture}" />
-                <Text text="  {/Study/Class}"/>
+                <Text text="{/Study/Lecture}" width="{/Study/Width}" />
+                <Text text="  {/Study/Class}" width="{/Study/Width}"/>
 
             </HBox>
             <HBox>
-                <Label text="{/Infor/Name}"/>
-                <Label text="{/Infor/Number}"/>
+                <Label text="{/Infor/Name}"   design="{/Infor/Design}"/>
+                <Label text="{/Infor/Number}" design="{/Infor/Design}"/>
 
+            </HBox>
+
+            <!-- Prop 이라는 방을 따로 만들었다면 주소는 "Prop>"" 을 사용함.
+            이거 기억하자 .. -->
+            <HBox>
+                <Input 
+                    width = "{Prop>/Input/Width}"
+                    placeholder="{Prop>/Input/PlaceHolder}"
+                    showClearIcon="{Prop>/Input/ShowClearIcon}"
+                    description="{Prop>/Input/Description}"/> <!-- Name Input Field가 나오도록 하기 실습.-->
             </HBox>
 
 
