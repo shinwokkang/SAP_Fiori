@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        app: [code2_script_edu01, code2_fiori_edu01]
+        app: [code2_script_edu01, code2_fiori_edu01, code2_fiori_edu02]
     defaults:
       run:
         working-directory: ${{ matrix.app }}

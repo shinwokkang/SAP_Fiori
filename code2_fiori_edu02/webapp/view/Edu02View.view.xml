@@ -1,0 +1,25 @@
+<mvc:View 
+    controllerName="code2.fiori.edu02.code2fioriedu02.controller.Edu02View"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+    <!-- VBox는 아래로 쭈욱 HBox는 옆으로 쭈욱.-->
+        <VBox> 
+            <HBox>
+                <Text text="{/Study/Lecture}" />
+                <Text text="  {/Study/Class}"/>
+
+            </HBox>
+            <HBox>
+                <Label text="{/Infor/Name}"/>
+                <Label text="{/Infor/Number}"/>
+
+            </HBox>
+
+
+        </VBox>
+
+
+    </Page>
+</mvc:View>
