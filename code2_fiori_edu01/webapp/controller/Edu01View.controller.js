@@ -70,13 +70,13 @@ sap.ui.define([
             // 변수와 상수가 가지는 것. 변수 Right가 가지는 값이 "Right" 이었기 때문에 가능했던 것임.
             
             
-            let msg = "Text를 우측으로 정렬합니다."
+            let msg = "Text를 우측으로 정렬합니다.";
             
             MessageToast.show(msg, {
                 duration: 2,
                 width: "30rem",
                 animationDuration: 1000
-            })
+            });
         },
 
 
@@ -85,13 +85,13 @@ sap.ui.define([
             let oText2 = this.getView().byId("TxT1");
             oText2.setTextAlign(sap.ui.core.TextAlign.Center);
         
-            let msg = "Text를 가운데로 정렬합니다."
+            let msg = "Text를 가운데로 정렬합니다.";
             
             MessageToast.show(msg, {
                 duration: 2,
                 width: "30rem",
                 animationDuration: 1000
-            })        
+            });
         
         },
 
@@ -100,13 +100,13 @@ sap.ui.define([
             let oText3 = this.getView().byId("TxT1");
             oText3.setTextAlign(sap.ui.core.TextAlign.Left);
 
-            let msg = "Text를 좌측으로 정렬합니다."
+            let msg = "Text를 좌측으로 정렬합니다.";
             
             MessageToast.show(msg, {
                 duration: 2,
                 width: "30rem",
                 animationDuration: 1000
-            })
+            });
         },
 
         onShowHello : function ()
