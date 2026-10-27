@@ -35,7 +35,7 @@ sap.ui.define([
                     
              const oStudent = {
                                 Name  : "강신욱",
-                                Number: "1"
+                                Number: 1
                                };
 
             const oModel = new JSONModel(oJson); // class 를 사용하기 위해서는 반드시 new를 붙여줘야한다.

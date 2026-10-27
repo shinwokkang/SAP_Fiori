@@ -112,13 +112,18 @@
         Label에 각각 Name과 본인번호가 Json을 통해서 나오게 할 것.-->
         <HBox
                 width="100%"
-                alignContent="SpaceBetween"
                 justifyContent="Center"
-                renderType="Div"
-                wrap="Wrap">
+                alignContent="SpaceBetween"
+               >
             
             <Label 
-                    text = "Name : {/Name}  / Number : {/Number}"/>
+                    text = "Name : {/Name}"
+                    textAlign="Center"
+                    design="Bold"/>
+            <Label 
+                    text = "Number : {/Number}"
+                    textAlign="Center"
+                    design="Bold"/>
         
         </HBox>
 
