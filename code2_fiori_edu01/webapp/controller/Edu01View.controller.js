@@ -41,7 +41,7 @@ sap.ui.define([
             const oModel = new JSONModel(oJson); // class 를 사용하기 위해서는 반드시 new를 붙여줘야한다.
             const oModel2 = new JSONModel(oStudent);
 
-            let oView = this.getView() // View를 대신하는 instance를 만듦. (instance를 만들어서 사용하고자 함.) 얘는 new를 사용하지 않아도 되는 이유가 어떻게돼?    
+            let oView = this.getView(); // View를 대신하는 instance를 만듦. (instance를 만들어서 사용하고자 함.) 얘는 new를 사용하지 않아도 되는 이유가 어떻게돼?    
                 oView.setModel(oModel); // instance를 생성해서 사용하는 방법.
             
                 oView.setModel(oModel2); // 이렇게 setModel(oModel2) 를 하게 된다면, setModel(oModel)은 덮어쓰여진다. 즉, Lecture와 Class는 사용하지 못하게 됨.
