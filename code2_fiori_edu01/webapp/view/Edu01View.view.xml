@@ -72,7 +72,21 @@
             1. View에 만들어진 TxT1 객체를 Center로 이동 시키는 Button을 생성할 것.
             2. View에 만들어진 Lavel의 Text를 End로 이동시키는 버튼을 만들 것.-->   
 
-</HBox>
+        </HBox>
+
+        <HBox
+                width="100%"
+                alignContent="SpaceBetween"
+                justifyContent="Center"
+                renderType="Div"
+                wrap="Wrap">
+
+            <Button id = "HelloButton"
+                    text="Say Hello"
+                    press=".onShowHello"            
+            />
+
+        </HBox>
 
     
     </Page>
