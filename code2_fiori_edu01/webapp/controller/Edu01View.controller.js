@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/Text"
-], (Controller, Text) => { // 배열 안에 Controller - Text 순서니까 매개변수는 Controller - Text 순서로 작성할 것.
+    "sap/m/Text",
+    "sap/m/MessageToast"
+], (Controller, Text, MessageToast) => { // 배열 안에 Controller - Text 순서니까 매개변수는 Controller - Text 순서로 작성할 것.
     "use strict";
 
     
@@ -61,13 +62,21 @@ sap.ui.define([
              */
             let oText1 =  this.getView().byId("TxT1"); // document.getElementById(" "), 신기하게 . 누를 때 관련 함수들이 안나오네 .. 또한 이 문장의 의미는 View의 <Text id = "TxT1"> 을 부른 것과 동일
             // eslint-disable-next-line no-console -- byId가 돌려주는 컨트롤 객체 확인용
-            console.log(oText1);
+            // console.log(oText1);
 
             oText1.setTextAlign(sap.ui.core.TextAlign.Right); // 원래는 이렇게 사용하는 것이 맞다고 하심.
             // oText1.setTextAlign("Right"); // 이렇게 써도 되긴함.
             // 왜 동일하게 먹히는가 ?
             // 변수와 상수가 가지는 것. 변수 Right가 가지는 값이 "Right" 이었기 때문에 가능했던 것임.
-
+            
+            
+            let msg = "Text를 우측으로 정렬합니다."
+            
+            MessageToast.show(msg, {
+                duration: 2,
+                width: "30rem",
+                animationDuration: 1000
+            })
         },
 
 
@@ -75,12 +84,43 @@ sap.ui.define([
         {
             let oText2 = this.getView().byId("TxT1");
             oText2.setTextAlign(sap.ui.core.TextAlign.Center);
+        
+            let msg = "Text를 가운데로 정렬합니다."
+            
+            MessageToast.show(msg, {
+                duration: 2,
+                width: "30rem",
+                animationDuration: 1000
+            })        
+        
         },
 
         _textLeft : function()
         {
             let oText3 = this.getView().byId("TxT1");
             oText3.setTextAlign(sap.ui.core.TextAlign.Left);
+
+            let msg = "Text를 좌측으로 정렬합니다."
+            
+            MessageToast.show(msg, {
+                duration: 2,
+                width: "30rem",
+                animationDuration: 1000
+            })
+        },
+
+        onShowHello : function ()
+        {
+            let msg = "Hello\n World";
+            MessageToast.show(msg, {
+                duration    : 2,
+                width       : "10em",
+                animationDuration   : 1000,
+                animationTimingFunction: "linear",
+
+                my:""
+            });
         }
+
     });
 });
