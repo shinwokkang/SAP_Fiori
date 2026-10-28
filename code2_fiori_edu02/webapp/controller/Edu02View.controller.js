@@ -165,14 +165,18 @@ sap.ui.define([
 
         onAlertName : function(oEvent)
         {
+            // eslint-disable-next-line no-console
             console.log(oEvent.getId());
+            // eslint-disable-next-line no-console
             console.log(oEvent.getSource().getId());
+            // eslint-disable-next-line no-alert
             alert("Nameeeee");
-            oEvent.getSource().setIcon("sap-icon://bell-2")
+            oEvent.getSource().setIcon("sap-icon://bell-2");
         },
 
         onAlretSetting : function(oEvent)
         {
+            // eslint-disable-next-line no-alert
             alert("설정완료");
             this.getView().byId("iSettingButton").setEnabled(false);
             // oEvent.getSource().setEnabled(false);
