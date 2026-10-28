@@ -55,19 +55,19 @@ sap.ui.define([
         onPressBegin : function ()
         {
             let oText = this.getView().byId("TxT1");
-            oText.setTextAlign(sap.ui.core.TextAlign.Begin)
+            oText.setTextAlign(sap.ui.core.TextAlign.Begin);
         },
 
         onPressCenter : function ()
         {
             let oText = this.getView().byId("TxT1"); // this.getView.byId("TxT1") = Text 라는 태그 = Text Class. 이것을 받은 oText는 Class를 받은 isntance
-            oText.setTextAlign(sap.ui.core.TextAlign.Center)
+            oText.setTextAlign(sap.ui.core.TextAlign.Center);
         },
 
         onPressRight : function ()
         {
             let oText = this.getView().byId("TxT1");
-            oText.setTextAlign(sap.ui.core.TextAlign.Right)
+            oText.setTextAlign(sap.ui.core.TextAlign.Right);
         },
 
         /**
@@ -107,16 +107,18 @@ sap.ui.define([
             
             
             // 2번 째 방법.            
-            const oText = this.getView().byId("TxT1")
+            const oText = this.getView().byId("TxT1");
             const TextAlign = sap.ui.core.TextAlign;
             
             const oData = {
                 Begin  : TextAlign.Begin,
                 Center : TextAlign.Center,
                 Right  : TextAlign.Right
-            }
+            };
             
-            oText.setTextAlign(oData.pAlign);
+            // ✏️ 고침(10/28): 점(.) 뒤의 pAlign은 "pAlign"이라는 이름의 키를 찾아서 undefined → 대괄호로 변수 값을 키로 써요
+            // oText.setTextAlign(oData.pAlign);   ← 내 코드
+            oText.setTextAlign(oData[pAlign]);
 
             // oText.setTextAlign(pAlign);
             
