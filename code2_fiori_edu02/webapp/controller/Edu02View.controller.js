@@ -55,19 +55,19 @@ sap.ui.define([
         onPressBegin : function ()
         {
             let oView = this.getView().byId("TxT1");
-            oView.setTextAlign("Begin")
+            oView.setTextAlign("Begin");
         },
 
         onPressCenter : function ()
         {
             let oView = this.getView().byId("TxT1");
-            oView.setTextAlign("Center")
+            oView.setTextAlign("Center");
         },
 
         onPressRight : function ()
         {
             let oView = this.getView().byId("TxT1");
-            oView.setTextAlign("Right")
+            oView.setTextAlign("Right");
         },
 
         onPressChagneText : function ()
@@ -81,6 +81,7 @@ sap.ui.define([
         onLiveChange : function (oEvent)
         {
             let sValue  = oEvent.getParameters("value").value;
+            // eslint-disable-next-line no-console
             console.log(sValue);
             let oView = this.getView().byId("Inp1");
             oView.setValue(sValue);
