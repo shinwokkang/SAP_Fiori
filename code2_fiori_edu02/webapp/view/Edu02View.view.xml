@@ -71,7 +71,8 @@
             <Label 
                 id="Lab1"
                 text="다음주 회식"
-                design="Bold"/>
+                design="Bold"
+                width="{Input>/Width}"/>
             <Input 
                 id="Inp1"
                 placeholder="{Input>/PlaceHolder}"
@@ -80,7 +81,7 @@
                 />
             <Button 
                 text="문자열 바꾸기"
-                press=".onPressChagneText"/>
+                press=".onChangeValue"/>
 
         </VBox>
 
