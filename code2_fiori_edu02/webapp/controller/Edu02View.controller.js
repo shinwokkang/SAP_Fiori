@@ -247,7 +247,9 @@ sap.ui.define([
 
             // if (vMatchNumber == 0 )
             // if (vMatch == " ")
-            if ( vMatchBool ){
+            // ✏️ 고침(10/28): 찾았을 때(true) "Un Match"가 같이 뜨던 것 → 못 찾았을 때(!)로
+            // if ( vMatchBool ){   ← 내 코드
+            if ( !vMatchBool ){
                 sap.m.MessageToast.show("Un Match");
             }
 
