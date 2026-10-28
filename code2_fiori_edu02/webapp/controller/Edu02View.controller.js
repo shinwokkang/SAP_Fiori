@@ -151,6 +151,18 @@ sap.ui.define([
             oTag.byId("Lab1").setText(getValue);
         },
 
+        onDetectChange : function (oEvent)
+        {
+            let vTag = oEvent.getSource();
+            let vValue = oEvent.getParameters().value;
+            let vValueLength = vValue.length;
+            
+            if (vValueLength >= 4 )
+            {
+                vTag.setValue(vValue.slice(0,3));
+            } 
+        },
+
     });
 });
 

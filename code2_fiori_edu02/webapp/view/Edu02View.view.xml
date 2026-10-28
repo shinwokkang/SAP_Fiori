@@ -85,6 +85,60 @@
 
         </VBox>
 
+        <VBox>
+
+            <Text 
+                text="SAP Code2 Class 1"/>
+            <Text 
+                text="Class 1 본인이름"/>
+            <Label 
+                text="구로디지털단지 2번 출구"/>
+            <Label 
+                text="걸어서 10분거리"
+                design = "Bold"/>
+        </VBox>
+
+        <VBox>
+            <VBox
+                justifyContent="Center"
+                fitContainer="true"
+                width="40em">
+
+
+                <HBox
+                    width="100%">
+                    <Label text="ID"/>
+                    <Input />
+                </HBox>
+            <HBox>
+                <Label text="Name"/>
+                <Input />                            
+            </HBox>
+            <HBox>
+                <Label text="Age" />
+                <Input id = "iNum"
+                        type="Number" 
+                        liveChange=".onDetectChange" />            
+            </HBox>
+            </VBox>
+
+            <Input
+                width="10em"
+                placeholder="Address"
+                showClearIcon="true"/>
+            
+            <HBox>
+
+            <Input
+                width="10em"
+                placeholder="Hobby"/>
+            <Text text="please write only one hobby."/>
+
+            </HBox>
+            
+        </VBox>
+
+
         
     </Page>
 </mvc:View>
