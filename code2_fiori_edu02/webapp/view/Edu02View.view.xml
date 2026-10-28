@@ -139,6 +139,33 @@
         </VBox>
 
 
+        <VBox >
+            <Text text="SAP Code2 Class1 Fiori Text"
+                  width="200px"
+                  textAlign="Center"/>
+            
+            <Label text="Class 1 Fighting"
+                    width="20rem"
+                    design="Bold"/>
+            
+            <Button text="Airline"
+                    icon="sap-icon://travel-itinerary"/>
+
+            <Button id="iAirBellButton"
+                    text="Bell"
+                    icon="sap-icon://bell"
+                    press=".onAlertName"
+                    width="100px"/>
+
+            <Button id="iSettingButton"
+                    text="Setting"
+                    icon="sap-icon://action-settings"
+                    press=".onAlretSetting"
+                    width="30em" />
+        </VBox>
+
+
+
         
     </Page>
 </mvc:View>

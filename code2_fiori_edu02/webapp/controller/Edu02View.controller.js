@@ -163,6 +163,21 @@ sap.ui.define([
             } 
         },
 
+        onAlertName : function(oEvent)
+        {
+            console.log(oEvent.getId());
+            console.log(oEvent.getSource().getId());
+            alert("Nameeeee");
+            oEvent.getSource().setIcon("sap-icon://bell-2")
+        },
+
+        onAlretSetting : function(oEvent)
+        {
+            alert("설정완료");
+            this.getView().byId("iSettingButton").setEnabled(false);
+            // oEvent.getSource().setEnabled(false);
+        },
+
     });
 });
 
