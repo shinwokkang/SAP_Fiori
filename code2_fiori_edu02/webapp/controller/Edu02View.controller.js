@@ -225,6 +225,35 @@ sap.ui.define([
             this.getView().byId("iRate").setValue(Rate);
         },
 
+
+
+        matchNum : function ()
+        {
+            const aNumber    = [10, 20, 30, 40, 50],
+                    oView    = this.getView(),
+                vMatchNum    = oView.byId("iMatchNum").getValue();
+            let vMatchBool   = false,
+                vMatchNumber = 0,
+                vMatch       = " ";
+                
+
+            for (const element of aNumber) {
+                if ( parseInt(vMatchNum) == element ) {
+                        vMatchBool = true;
+                        sap.m.MessageToast.show("Match");
+                        break;
+                    }          
+            }
+
+            // if (vMatchNumber == 0 )
+            // if (vMatch == " ")
+            if ( vMatchBool ){
+                sap.m.MessageToast.show("Un Match");
+            }
+
+                
+        }
+
     });
 });
 
