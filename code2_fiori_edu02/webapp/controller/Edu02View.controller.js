@@ -225,6 +225,37 @@ sap.ui.define([
             this.getView().byId("iRate").setValue(Rate);
         },
 
+
+
+        matchNum : function ()
+        {
+            const aNumber    = [10, 20, 30, 40, 50],
+                    oView    = this.getView(),
+                vMatchNum    = oView.byId("iMatchNum").getValue();
+            let vMatchBool   = false,
+                vMatchNumber = 0,
+                vMatch       = " ";
+                
+
+            for (const element of aNumber) {
+                if ( parseInt(vMatchNum) == element ) {
+                        vMatchBool = true;
+                        sap.m.MessageToast.show("Match");
+                        break;
+                    }          
+            }
+
+            // if (vMatchNumber == 0 )
+            // if (vMatch == " ")
+            // ✏️ 고침(10/28): 찾았을 때(true) "Un Match"가 같이 뜨던 것 → 못 찾았을 때(!)로
+            // if ( vMatchBool ){   ← 내 코드
+            if ( !vMatchBool ){
+                sap.m.MessageToast.show("Un Match");
+            }
+
+                
+        }
+
     });
 });
 

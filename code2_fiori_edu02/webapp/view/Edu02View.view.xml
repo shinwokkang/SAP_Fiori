@@ -255,6 +255,19 @@
 
 
 
+        <VBox>
+            <HBox>
+                <Text   text="Number : "
+                        width="5em"/>
+                <Input  id="iMatchNum"
+                        placeholder="Input Number"
+                        />
+            </HBox>
+
+            <Button 
+                        text="Match 체크"
+                        press=".matchNum"/>
+        </VBox>
         
     </Page>
 </mvc:View>
