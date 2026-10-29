@@ -15,7 +15,7 @@ sap.ui.define([
                                 { Carrid  : "VA",    Carrname : "Vietnam Air",       Price    : 25400,   Currency : "VND" },
                                 { Carrid  : "UA",  Carrname : "United States",     Price    : 265,     Currency : "USD" }
                             ]
-            }
+            };
 
             this.getView().setModel(new JSONModel(oGrid));
         }

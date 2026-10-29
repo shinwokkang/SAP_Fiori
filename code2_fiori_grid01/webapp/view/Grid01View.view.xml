@@ -7,12 +7,13 @@
 
     <Page id="page" title="{i18n>title}">
 
+        <!-- ✏️ 고침(10/29): paste="onPaste"를 뺐어요. 컨트롤러에 onPaste 함수가 없어서 [FUTURE FATAL] 경고가 나요.
+             내 코드: ariaLabelledBy="title" paste="onPaste"> -->
     	<t:Table
             rows="{/airSet}"
             selectionMode="MultiToggle"
             selectionBehavior="RowSelector"
-            ariaLabelledBy="title"
-            paste="onPaste">
+            ariaLabelledBy="title">
    
             <t:extension>
                 <OverflowToolbar style="Clear">
