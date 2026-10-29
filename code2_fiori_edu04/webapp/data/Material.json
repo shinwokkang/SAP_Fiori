@@ -1,0 +1,8 @@
+{
+  "gt_steel" : [
+                  { "Matnr" : "STEEL_01", "Maktx" : "Steel 01", "Mtart" : "HAWA" , "Menge" : 10 }, 
+                  { "Matnr" : "STEEL_02", "Maktx" : "Steel 02", "Mtart" : "HALB" , "Menge" : 25 },
+                  { "Matnr" : "STEEL_03", "Maktx" : "Steel 03", "Mtart" : "ROH"  , "Menge" : 250},
+                  { "Matnr" : "STEEL_04", "Maktx" : "Steel 04", "Mtart" : "FERT" , "Menge" : 50 }
+               ]
+}

@@ -1,0 +1,16 @@
+<mvc:View controllerName="code2.fiori.edu04.code2fioriedu04.controller.Edu04View"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <VBox >
+            <Button text="Get Model"
+                    press=".checkModel"/>
+
+            <Button text="Get Itab"
+                    press=".checkItab"/>
+
+            <Button text="Get Global Itab"
+                    press=".checkJsonFile"/>
+        </VBox>
+    </Page>
+</mvc:View>
