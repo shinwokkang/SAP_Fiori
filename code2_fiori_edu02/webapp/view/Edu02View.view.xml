@@ -28,7 +28,47 @@
             </HBox>
 
 
+            <!-- 실습 -->
+
+            <HBox>
+                <Text
+                    id = "TxT1"
+                    text="오늘은 코드2기 2주차"
+                    width="{Text>/Width}" 
+                    textAlign="Begin"/>   
+            </HBox>
+
+            <HBox
+                justifyContent="Center">
+
+                <Button 
+                        text="Begin"
+                        press=".onPressBegin"/>      
+                <Button 
+                        text="Center"
+                        press=".onPressCenter"/>   
+                <Button 
+                        text="Right"
+                        press=".onPressRight"/>   
+            </HBox>
+
+            <Label 
+                id="Lab1"
+                text="다음주 회식"
+                design="Bold"/>
+            <Input 
+                id="Inp1"
+                placeholder="{Input>/PlaceHolder}"
+                width="{Input>/Width}"
+                liveChange=".onLiveChange"
+                />
+            <Button 
+                text="문자열 바꾸기"
+                press=".onPressChagneText"/>
+
         </VBox>
+
+        
 
 
     </Page>
