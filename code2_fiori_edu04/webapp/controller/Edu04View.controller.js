@@ -1,3 +1,6 @@
+// ✏️ 고침(10/29): 콘솔 출력으로 확인하는 실습이라 이 파일 전체에서 console.log를 허용해요 (lint 오류 no-console).
+//               확인이 끝나면 이 주석 · 아래 줄 · console.log들을 지우면 돼요.
+/* eslint-disable no-console */
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel"
@@ -66,7 +69,7 @@ sap.ui.define([
             
             }
 
-            console.log("=========")
+            console.log("=========");
 
             for (const ls_data of lt_data) {
                 for (const key in ls_data) { 
