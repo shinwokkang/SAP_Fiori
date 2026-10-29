@@ -26,10 +26,12 @@ sap.ui.define([
                                          ]
                         },
                 
-                oModel       = new JSONModel(oData);
+                oModel       = new JSONModel(oData),
+                oMemberModel = new JSONModel("/data/Member.json");
             
             this.getView().setModel(oModel);
             this.getView().setModel(new JSONModel("/data/Material.json"), "Mat");
+            this.getView().setModel(oMemberModel, "Member");
 
 
 
@@ -89,6 +91,22 @@ sap.ui.define([
                 
             }
 
+        },
+
+
+        /**
+         * 실습
+         * 1. data/Member.json 에 JSON 파일을 하나 새롭게 만든다.
+         * 2. View에 Get Name 이라는 버튼을 생성한다.
+         * 3. 위 버튼을 클릭하면 위에서 만든 Model을 가져와서 출력한다.
+         */ 
+        checkMember : function ()
+        {
+            let oModel    = this.getView().getModel("Member"),
+                lt_member = oModel.oData.gt_member;
+
+            for (const ls_member of lt_member) {
+                console.log(ls_member.id + " , " + ls_member.Gender + " , " + ls_member.Use + " , " + ls_member.Age);            }
         }
     });
 });

@@ -11,6 +11,10 @@
 
             <Button text="Get Global Itab"
                     press=".checkJsonFile"/>
+        
+            <!-- 실습. Get Name 버튼 생성 -->
+            <Button text="Get Name"
+                    press=".checkMember" />
         </VBox>
     </Page>
 </mvc:View>
