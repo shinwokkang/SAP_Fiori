@@ -5,6 +5,9 @@
     <Page id="page" title="{i18n>title}">
 
     <!-- VBox는 아래로 쭈욱 HBox는 옆으로 쭈욱.-->
+
+
+
         <VBox> 
             <HBox>
                 <Text text="{/Study/Lecture}" width="{/Study/Width}" />
@@ -41,7 +44,7 @@
             <HBox
                 justifyContent="Center">
 
-                <Button 
+                <!-- <Button 
                         text="Begin"
                         press=".onPressBegin"/>      
                 <Button 
@@ -49,7 +52,20 @@
                         press=".onPressCenter"/>   
                 <Button 
                         text="Right"
-                        press=".onPressRight"/>   
+                        press=".onPressRight"/>    -->
+            
+                <Button 
+                        text="Begin"
+                        press='.onPressBegin("Begin")'/>      
+                <Button 
+                        text="Center"
+                        press=".onPressCenter('Center')"/>   
+                <Button 
+                        text="Right"
+                        press=".onPressRight('Right')"/>   
+            
+            
+            
             </HBox>
 
             <Label 
@@ -69,7 +85,5 @@
         </VBox>
 
         
-
-
     </Page>
 </mvc:View>
