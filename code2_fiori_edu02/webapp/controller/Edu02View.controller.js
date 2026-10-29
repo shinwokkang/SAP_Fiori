@@ -128,9 +128,9 @@ sap.ui.define([
         onPressChagneText : function ()
         {
             // let sValue = onLiveChange(oEvent);
-            let oView = this.getView().byId("Lab1");
-            let oView2 = this.getView().byId("Inp1");
-            oView.setText(oView2.getValue());
+            let oLabel = this.getView().byId("Lab1");
+            let oInput = this.getView().byId("Inp1");
+            oLabel.setText(oInput.getValue());
         },
 
         onLiveChange : function (oEvent)
@@ -140,6 +140,15 @@ sap.ui.define([
             console.log(sValue);
             let oView = this.getView().byId("Inp1");
             oView.setValue(sValue);
+        },
+
+
+        onChangeValue : function ()
+        {
+            let oTag = this.getView();
+            
+            let getValue = oTag.byId("Inp1").getValue();
+            oTag.byId("Lab1").setText(getValue);
         },
 
     });
