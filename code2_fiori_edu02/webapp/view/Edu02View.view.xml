@@ -166,6 +166,95 @@
 
 
 
+        <VBox >
+                <Input  id="iNum1"
+                        placeholder="1st Number"
+                        width="20em"
+                        type="Number"
+                        showClearIcon="true"/>
+
+                <Input  id="iNum2"
+                        placeholder="2nd Number"
+                        width="20em"
+                        type="Number"
+                        showClearIcon="true"/>
+
+                <Input  id="iNumResult"
+                        placeholder="Result"
+                        width="20em"
+                        type="Number"
+                        showClearIcon="true"
+                        />
+
+                <Button text="계산"
+                        press=".onCalNum"/>
+        </VBox>
+
+        <VBox >
+            <Input  id="iBase"
+                    width="20em"
+                    placeholder="밑변"
+                    showClearIcon="true"/>
+            <Input id="iTWidth"
+                    width="20em"
+                    placeholder="높이"
+                    showClearIcon="true"/>
+            <Input  id = "iTriResult"
+                    width="20em"
+                    placeholder="삼각형 넓이"
+                    showClearIcon="true"/>
+            <Button text="계산"
+                    press=".onTriCal"/>
+        </VBox>        
+
+
+
+        <VBox >
+            <HBox 
+                width="15em"
+                alignContent="Center"
+                alignItems="Center"
+                justifyContent="SpaceBetween"            >
+                <Text  
+                        text="물건값"/>
+                <Input  id="iProduct"/>
+            </HBox>
+            <HBox >
+                <Text   width="20em"
+                        text="할인율"/>
+                <Input  id="iDiscount"/>            
+            </HBox>
+            <HBox >
+                <Text   width="20em"
+                        text="할인된값"/>
+                <Input  id="iPrice"/>
+            </HBox>
+            <Button text="계산"
+                    press=".onRateToPrice"/>
+        </VBox>
+
+        <VBox >
+            <HBox >
+                <Text   width="20em"
+                        text="물건값"/>
+                <Input  id="iProduct2"/>
+            </HBox>
+            <HBox >
+                <Text   width="20em"
+                        text="지불한값"/>
+                <Input  id="iPay"/>            
+            </HBox>
+            <HBox >
+                <Text   width="20em"
+                        text="할인율"/>
+                <Input  id="iRate"/>
+            </HBox>
+            <Button text="계산"
+                    press=".onPriceToRate"/>
+        </VBox>
+
+
+
         
     </Page>
 </mvc:View>

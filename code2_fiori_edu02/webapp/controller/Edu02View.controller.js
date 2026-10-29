@@ -182,6 +182,49 @@ sap.ui.define([
             // oEvent.getSource().setEnabled(false);
         },
 
+        
+        onCalNum : function (oEvent)
+        {
+            const oView = this.getView();
+
+            let Num1    = oView.byId("iNum1").getValue(),
+                Num2    = oView.byId("iNum2").getValue(),
+                Result  = ( parseInt(Num1) + parseInt(Num2)) * 10;
+
+            this.getView().byId("iNumResult").setValue(Result);
+        },
+
+        onTriCal : function (oEvent)
+        {
+            let Base      = this.getView().byId("iBase").getValue(),
+                Width    = this.getView().byId("iTWidth").getValue(),
+                TriResult = ( parseInt(Base) * parseInt(Width) ) / 2 ;
+
+            this.getView().byId("iTriResult").setValue(TriResult);
+        },
+
+
+
+
+        onRateToPrice : function ()
+        {
+            let Product  = this.getView().byId("iProduct").getValue(),
+            
+                Discount = this.getView().byId("iDiscount").getValue(),
+                Price    = parseInt(Product) - (parseInt(Product) * (parseInt(Discount) / 100 ));
+
+            this.getView().byId("iPrice").setValue(Price);
+        },
+
+        onPriceToRate : function()
+        {
+            let Product = this.getView().byId("iProduct2").getValue(),
+                Pay     = this.getView().byId("iPay").getValue(),
+                Rate    = ( 100 - ( (parseInt(Pay) / parseInt(Product) ) * 100 ));
+
+            this.getView().byId("iRate").setValue(Rate);
+        },
+
     });
 });
 
