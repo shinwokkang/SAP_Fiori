@@ -1,0 +1,8 @@
+<mvc:View controllerName="code2.fiori.edu03.code2fioriedu03.controller.Edu03View"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text text="{/TextInfor/Text}" width="{/TextInfor/width}"/>
+        <Text text="{import>/TextInfor/Text}" width="{import>/TextInfor/width}"/>
+    </Page>
+</mvc:View>
