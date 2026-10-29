@@ -72,6 +72,97 @@
 
         </t:Table>       
 
+
+        <!-- 실습. -->
+
+    	<t:Table
+            rows="{Mat>/gt_steel}"
+            selectionMode="MultiToggle"
+            selectionBehavior="RowSelector"
+            ariaLabelledBy="title"
+            paste="onPaste">
+   
+            <t:extension>
+                <OverflowToolbar style="Clear">
+                    <Title id="title1" text="Material Set"/>
+                </OverflowToolbar>
+            </t:extension>
+   
+            <t:columns>
+                <t:Column width="6rem">
+                    <Label text="material" />
+                    <t:template>
+                        <Text text="{Mat>Matnr}" wrapping="false" />
+                    </t:template>
+                </t:Column>             
+            </t:columns>
+
+            <t:columns>
+                <t:Column width="8rem">
+                    <Label text="Mat.Desc" />
+                    <t:template>
+                        <Text text="{Mat>Maktx}" wrapping="false" />
+                    </t:template>
+                </t:Column>             
+            </t:columns>
+
+            <t:columns>
+                <t:Column width="8rem">
+                    <Label text="Plant" />
+                    <t:template>
+                        <Text text="{Mat>Werks}" wrapping="false"/>
+                    </t:template>
+                </t:Column>             
+            </t:columns>
+
+            <t:columns>
+                <t:Column width="8rem">
+                    <Label text="Net Price" />
+						<t:template>
+							<!-- <u:Currency value="{Mat>Netprice}" currency="{Mat>Curr}"/> -->
+						<Text text="{
+                            parts:[{path:'Mat>Netprice'},{path:'Mat>Curr'}],
+                            type: 'sap.ui.model.type.Currency',
+                            formatOptions: {showMeasure: true }
+                            }" wrapping="false" />
+
+                        </t:template>
+                </t:Column>             
+            </t:columns>
+
+            <t:columns>
+                <t:Column width="8rem">
+                    <Label text="Net Price" />
+						<t:template>
+							<u:Currency value="{Mat>Netprice}" currency="{Mat>Curr}"/>
+                        </t:template>
+                </t:Column>             
+            </t:columns>
+
+            <!-- <t:columns>
+                <t:Column width="8rem">
+                    <Label text="Currency" />
+                    <t:template>
+                        <Text text="{Mat>Curr}" wrapping="false" />
+                    </t:template>
+                </t:Column>             
+            </t:columns> -->
+
+        </t:Table>       
+
+
+
+
+
+
+
+
+
+        <!-- 실습.
+        1.  -->
+           
+           
+           
     </Page>
 
 

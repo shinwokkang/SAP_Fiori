@@ -18,6 +18,8 @@ sap.ui.define([
             };
 
             this.getView().setModel(new JSONModel(oGrid));
+
+            this.getView().setModel(new JSONModel("/data/material.json"), "Mat");
         }
     });
 });
