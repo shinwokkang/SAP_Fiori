@@ -1,0 +1,98 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "code2.fiori.grid01.code2fiorigrid01",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.33.0",
+      "toolsId": "a459fa5e-9441-472c-96c2-f6786e605f16"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.52",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "code2.fiori.grid01.code2fiorigrid01.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "code2.fiori.grid01.code2fiorigrid01.view",
+        "async": true,
+        "viewPath": "code2.fiori.grid01.code2fiorigrid01.view"
+      },
+      "routes": [
+        {
+          "name": "RouteGrid01View",
+          "pattern": ":?query:",
+          "target": [
+            "TargetGrid01View"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetGrid01View": {
+          "id": "Grid01View",
+          "name": "Grid01View"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "code2.fiori.grid01.code2fiorigrid01.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
