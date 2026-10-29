@@ -75,12 +75,13 @@
 
         <!-- 실습. -->
 
+        <!-- ✏️ 고침(10/29): paste="onPaste"를 뺐고(위 표와 같은 이유), ariaLabelledBy를 이 표의 제목 id인 title1로 바꿨어요.
+             내 코드: ariaLabelledBy="title" paste="onPaste"> -->
     	<t:Table
             rows="{Mat>/gt_steel}"
             selectionMode="MultiToggle"
             selectionBehavior="RowSelector"
-            ariaLabelledBy="title"
-            paste="onPaste">
+            ariaLabelledBy="title1">
    
             <t:extension>
                 <OverflowToolbar style="Clear">
