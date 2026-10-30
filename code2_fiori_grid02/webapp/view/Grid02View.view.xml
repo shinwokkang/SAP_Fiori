@@ -1,0 +1,68 @@
+<mvc:View 
+    controllerName="code2.fiori.grid02.code2fiorigrid02.controller.Grid02View"
+    xmlns:t="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:l="sap/ui/core/library"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+<t:Table
+            id="countrySet"
+            rows="{/countrySet}"
+            selectionMode="Single"
+            selectionBehavior="RowOnly"
+            ariaLabelledBy="title"
+            paste="onPaste">
+   
+            <t:extension>
+                <OverflowToolbar style="Clear">
+                    <Label text="국가" design="Bold"/>
+                    <Input id="ICountry" width="8em" placeholder="국가명" showClearIcon="true"/>
+
+                    <ToolbarSpacer width="3em"/>
+
+                    <Label text="Area" design="Bold"/>
+                    <Input id="IArea" width="8em" placeholder="수도명" showClearIcon="true"/>
+                  
+                    <Button text="Search" icon="sap-icon://search" width="10em" press=".onSearch"/>
+                </OverflowToolbar>
+            </t:extension>
+   
+            <t:columns>
+                <t:Column width="8rem">
+                    <Label text="Country Name" />
+                    <t:template>
+                        <Text text="{Country}" wrapping="false" />
+                    </t:template>
+                </t:Column>   
+
+                <t:Column width="9rem">
+                    <Label text="Country Capital" />
+                    <t:template>
+                        <Text text="{Capital}" wrapping="false" />
+                    </t:template>
+                </t:Column>       
+                
+                <t:Column width="10rem">
+                    <Label text="Country Area" />
+                    <t:template>
+                        <Text text="{Area}" wrapping="false"/>
+                    </t:template>
+                </t:Column>           
+            </t:columns>
+
+            
+        </t:Table>
+
+
+    </Page>
+</mvc:View>
+
+
+<!--
+실무에서는 이전 내 소스를 복붙함.
+해당 회사에 맞는 로직만 작성하고, 내가 가지고 있는 소스를 붙여넣음. 
+그래서 개발자의 재산은 Source임.
+
+-->
