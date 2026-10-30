@@ -1,0 +1,107 @@
+<mvc:View 
+    controllerName="code2.fiori.vizchart01.code2fiorivizchart01.controller.VizChart01View"    
+    xmlns:viz="sap.viz.ui5.controls" 
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    height="100%"    
+    >
+    
+    <Page id="page" title="{i18n>title}">
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height="23em" width="40em" vizType="pie"
+                vizProperties="{
+                    plotArea : { drawingEffect: 'glossy' },
+                    legend   : { drawingEffect: 'glossy' },
+                    title    : { 
+                                 text: 'Material Price Status', 
+                                 visible: true, 
+                                 style: { fontFamily: 'Helvetica'} 
+                                }
+                }"
+                >
+
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{/matSet}">
+
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Material"
+                                value="{Matnr}" />
+                        </viz.data:dimensions>
+
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Net Price"
+                                value="{Netpr}" />
+                        </viz.data:measures>
+
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Sales Price"
+                                value="{Dmbtr}" />
+                        </viz.data:measures>
+
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem uid="size" type="Measure"
+                        values="Net Price" />
+
+                    <viz.feeds:FeedItem uid="size" type="Measure"
+                        values="Sales Price" />
+
+                    <viz.feeds:FeedItem uid="color" type="Dimension"
+                        values="Material" />
+
+                </viz:feeds>
+                <viz:dependents>
+                    <viz:Popover id="idPopOver"></viz:Popover>
+                </viz:dependents>
+            </viz:VizFrame>
+    </Page>
+
+</mvc:View>
+
+<!--
+viaFrame은 1개의 dimenstion에 n개의 measure을 표현할 수 있다. 
+Ex. 1월에 단가와 판매량.
+
+https://ui5.sap.com/1.120.52/#/entity/sap.viz.ui5.controls.VizFrame 을 참고함.
+
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='pie'>
+
+vizFrame은 높이와 너비를 직접 줄 수 있음.
+vizTpye 에 따라서 차트가 바뀜. 단, uid만 vizType에 따라서 약간 달라진다.
+uid가 무엇인가?
+-> 지금 vizType : 'pie'
+Measure는 size로 나타낸다. -> uid ="size" type = "Measure" , 
+Dimension은 color로 구분한다. -> uid ="color" type = "Dimension" ,
+
+uid와 type만 바꾸어준다면 vizType만 바꿔주면 적용해서 전혀 다른 모습으로 바꿀 수 있다.
+
+=> #### ##### uid에 무슨 키워드가 있는 지 찾아보면 될 것 같음.
+
+dataset의 카디널리티는 0..1 임 -> 분리한다.
+dataset은 데이터를 정의하는 곳 (measure 은 무엇으로 할 것이고 dimension 은 무엇으로 할 것이다.)
+
+feed에서 dataset에서 정의한 것을 가져다가 쓴다.
+feeds는 dataset에서 정의한 것을 그대로 쓴다.
+따라서 values에 { } 형식으로 쓰지 않고 " " 상수 형식으로 접근함.
+여기에 가져오는 것은 dataset에서 정의한 name을 가져다가 쓴다.
+
+
+
+vizProperties
+object		
+Chart properties, refer to chart property doc for more details.
+의 document.
+
+https://ui5.sap.com/1.120.52/docs/vizdocs/index.html
+
+vizProperties 에 대해서 더 자세하게 볼 수 있는 곳.
+https://ui5.sap.com/1.120.52/docs/vizdocs/index.html#reference/chartProperty/Charts/Pie%20%20(2)/Pie%20Chart/
+
+
+-->
