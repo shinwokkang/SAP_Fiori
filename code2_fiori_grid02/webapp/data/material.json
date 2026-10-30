@@ -1,0 +1,10 @@
+{
+  "gt_steel" : [
+                  { "Matnr" : "STEEL",       "Maktx" : "Steel",          "Werks" : "1010" , "Netprice" : 25000,   "Curr": "KRW"}, 
+                  { "Matnr" : "RPX321",      "Maktx" : "Road Steel",     "Werks" : "1020" , "Netprice" : 3000,    "Curr": "USD"}, 
+                  { "Matnr" : "EL-GANG",     "Maktx" : "Strong Steel",   "Werks" : "1010" , "Netprice" : 5235,    "Curr": "USD"}, 
+                  { "Matnr" : "AL_S100",     "Maktx" : "Aluminum Stick", "Werks" : "1030" , "Netprice" : 10000,   "Curr": "EUR"}, 
+                  { "Matnr" : "Stain_T1000", "Maktx" : "Stainless Bar",  "Werks" : "1020" , "Netprice" : 150000,  "Curr": "KRW"}
+
+               ]
+}

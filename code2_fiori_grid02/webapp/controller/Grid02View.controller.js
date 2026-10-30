@@ -22,9 +22,11 @@ sap.ui.define([
                                             {Country : "러시아",    Capital : "모스크바",         Area : "유럽"}
                                         ]   
                             },
-                oModel    = new JSONModel(oJsonData);
+                oModel    = new JSONModel(oJsonData),
+                oModel2   = new JSONModel("/data/material.json");
 
                 this.getView().setModel(oModel);
+                this.getView().setModel(oModel2, "Mat");
                         
         },
 
@@ -79,6 +81,41 @@ sap.ui.define([
 
             
             // Filter에 null 값이 들어가면 알아서 All 로 출력됨.
+        },
+
+        onSearch2 : function ()
+        {
+            let oBinding  = this.getView().byId("materialSet").getBinding(),
+                oFilter   = null,
+                aFilter   = [],
+                vMatnr    = this.getView().byId("IMatnr").getValue(),
+                vNetprice = this.getView().byId("INetprice").getValue();
+         
+
+
+            if (vMatnr != "")
+            {
+                oFilter = new Filter({
+                    path: "Matnr",
+                    operator : FilterOperator.Contains,
+                    value1 : vMatnr
+                })
+                 aFilter.push(oFilter);
+            }
+
+            // input 값 비교할 때 !
+            if (vNetprice != "")
+            {
+                oFilter = new Filter({
+                    path: "Netprice",
+                    operator : FilterOperator.EQ,
+                    value1 : parseInt(vNetprice)
+                })
+                 aFilter.push(oFilter);
+            }
+
+            oBinding.filter(aFilter);
+
         }
     });
 });
