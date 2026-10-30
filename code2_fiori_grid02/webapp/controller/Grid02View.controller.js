@@ -99,7 +99,7 @@ sap.ui.define([
                     path: "Matnr",
                     operator : FilterOperator.Contains,
                     value1 : vMatnr
-                })
+                });
                  aFilter.push(oFilter);
             }
 
@@ -110,7 +110,7 @@ sap.ui.define([
                     path: "Netprice",
                     operator : FilterOperator.EQ,
                     value1 : parseInt(vNetprice)
-                })
+                });
                  aFilter.push(oFilter);
             }
 
