@@ -7,13 +7,14 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
 
+<!-- ✏️ 고침(10/30): paste="onPaste"를 뺐어요. 컨트롤러에 onPaste 함수가 없어서 [FUTURE FATAL] 경고가 나요.
+     내 코드: ariaLabelledBy="title" paste="onPaste"> -->
 <t:Table
             id="countrySet"
             rows="{/countrySet}"
             selectionMode="Single"
             selectionBehavior="RowOnly"
-            ariaLabelledBy="title"
-            paste="onPaste">
+            ariaLabelledBy="title">
    
             <t:extension>
                 <OverflowToolbar style="Clear">

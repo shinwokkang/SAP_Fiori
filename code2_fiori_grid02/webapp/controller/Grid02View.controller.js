@@ -37,6 +37,7 @@ sap.ui.define([
                 vCountry = this.getView().byId("ICountry").getValue(),
                 vArea    = this.getView().byId("IArea").getValue();
             
+            // eslint-disable-next-line no-console
             console.log(oBinding);
 
 
@@ -56,7 +57,7 @@ sap.ui.define([
                     path: "Country",
                     operator : FilterOperator.Contains,
                     value1 : vCountry
-                })
+                });
 
                 aFilter.push(oFilter); // null 은 넣지 않는다.
             }
@@ -67,7 +68,7 @@ sap.ui.define([
                     path: "Area",
                     operator : FilterOperator.Contains,
                     value1 : vArea
-                })
+                });
                  aFilter.push(oFilter);
             }
 
