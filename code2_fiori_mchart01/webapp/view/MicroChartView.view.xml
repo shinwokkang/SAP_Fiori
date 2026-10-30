@@ -1,0 +1,92 @@
+<mvc:View 
+    controllerName="code2.fiori.mchart.code2fiorimchart01.controller.MicroChartView"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.suite.ui.microchart"
+	xmlns:layout="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page id="page" title="{i18n>title}">
+    <HBox >
+    
+    
+		<FlexBox width="20rem" height="15rem" alignItems="Center" class="sapUiSmallMargin">
+			<items>
+				<m:InteractiveBarChart bars="{/code2Set}" 
+                displayedBars="7" labelWidth="25%" >
+					<m:bars>
+						<!-- <m:InteractiveBarChartBar label="{Class}"     value="{StdCount}" displayedValue="{StdCount} 명"/>
+						<m:InteractiveBarChartBar label="Product 2" value="20" displayedValue="20%"/>
+						<m:InteractiveBarChartBar label="Product 3" value="30" displayedValue="30%"/>
+						<m:InteractiveBarChartBar label="Product 4" value="40" displayedValue="40%"/> -->
+						
+                        <m:InteractiveBarChartBar label="{Class}" value="{StdCount}" displayedValue="{StdCount} 명"/>
+
+					</m:bars>
+				</m:InteractiveBarChart>
+			</items>
+		</FlexBox>
+
+        <ToolbarSpacer width="3em"/>
+
+        <FlexBox width="20rem" height="10rem" alignItems="Start" justifyContent="SpaceBetween">
+            <items>
+            <m:InteractiveDonutChart segments="{/code2Set}" displayedSegments="7"
+                    selectionChanged="onSelectionChanged">
+                    <m:segments >
+                        <m:InteractiveDonutChartSegment label="{Class}" value="{StdCount}" displayedValue="{StdCount} 명"/>
+                    </m:segments>
+                </m:InteractiveDonutChart>
+            </items>
+	    </FlexBox>
+
+        <ToolbarSpacer width="3em"/>
+
+		<FlexBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+			<items>
+				<m:InteractiveLineChart points="{/code2Set}" 
+                displayedPoints="7"
+                selectionChanged="selectionChanged" press="press" precedingPoint="15"
+									  succeedingPoint="89">
+					<m:points>
+						<m:InteractiveLineChartPoint value="{StdCount}" label="{Class}" secondaryLabel="단위 : 명"/>
+					</m:points>
+				</m:InteractiveLineChart>
+			</items>
+		</FlexBox>
+    </HBox>
+
+    </Page>
+</mvc:View>
+
+
+<!-- 
+Sample에서 "interactive" Search.
+x 축 : 기준되는 점 : dimension
+x축에 대한 수치 : measure
+
+https://ui5.sap.com/1.120.52/#/entity/sap.suite.ui.microchart.InteractiveBarChart/sample/sap.suite.ui.microchart.sample.InteractiveBarChart/code
+VBox, HBox, FlexBox
+
+value = measure. displayedValue
+value와 dispalyedValue는 서로 다름. (무엇이 다른 지 설명해줘.)
+
+
+- - - 
+controller 에 정의된 oChartData를 InteractiveBarChart로 그리고 싶음.
+
+InteractiveBarChart 도 여러 개의 행이 나와야함. == 순환형 데이터구조를 넣어야함.
+
+
+
+
+
+상세한 (날짜별, 제픔별) -> viz 이건 나중에 찾아봄.
+
+
+<m:InteractiveBarChart bars="{/code2Set}" 처럼 bars에 배열을 넣었더라면
+<bars> 안에 InteractiveBarChartBar은 반드시 1개만 들어가도록 해야함.
+약간 내부에서 순환하는 구조인 것 같음. (내생각엔.)
+
+
+-->
