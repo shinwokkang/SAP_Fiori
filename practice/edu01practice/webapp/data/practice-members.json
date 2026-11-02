@@ -1,0 +1,39 @@
+{
+  "gt_member": [
+    {
+      "Id": "HONG",
+      "Name": "홍길동",
+      "Gender": "M",
+      "Use": true,
+      "Age": 25
+    },
+    {
+      "Id": "LIM",
+      "Name": "임하늘",
+      "Gender": "M",
+      "Use": true,
+      "Age": 33
+    },
+    {
+      "Id": "KARINA",
+      "Name": "카리나",
+      "Gender": "F",
+      "Use": true,
+      "Age": 26
+    },
+    {
+      "Id": "WINTER",
+      "Name": "윈터",
+      "Gender": "F",
+      "Use": false,
+      "Age": 25
+    },
+    {
+      "Id": "GU",
+      "Name": "구바다",
+      "Gender": "M",
+      "Use": true,
+      "Age": 45
+    }
+  ]
+}

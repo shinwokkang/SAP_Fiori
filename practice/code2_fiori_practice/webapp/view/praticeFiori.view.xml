@@ -1,0 +1,90 @@
+<mvc:View 
+    controllerName="code2.fiori.pratice.code2fioripractice.controller.praticeFiori"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+    
+    <Page id="page" title="{i18n>title}">
+
+    <!-- 2번 문항
+        <VBox class="sapUiSmallMargin">
+            <Title text="W2 · Input Value Update"/>
+            
+            <form:SimpleForm editable="true" layout="ResponsiveGridLayout">
+                <Label text="ValueLiveUpdate"/>
+                <Switch state="{Live>/ValueLiveUpdate}"/>
+
+                <Label text="Type here"/>
+                <Input id="iW2" value="{Live>/InputValue}"
+                    valueLiveUpdate="{Live>/ValueLiveUpdate}"
+                    liveChange=".onLiveChangeW2"/>
+
+                <Label text="oInput.getValue()"/>
+                <Text id="tW2GetValue"/>
+
+                <Label text="oModel.getProperty()"/>
+                <Text id="tW2Prop" text="{Live>/InputValue}"/>
+
+                <Label text="글자 수"/>
+                <Text id="tW2Len" text="글자 수 : {Live>/Length}"/>
+            </form:SimpleForm>
+        </VBox>
+        -->
+
+
+
+        <!-- 3번 문항 
+        ### 📋 요구사항
+
+            1. Input + [추가] 버튼 + 빈 VBox(메모가 들어갈 자리) + Label `0 / 5`.
+            2. [추가]를 누를 때마다 VBox 안에 Text `1. (메모 내용)`을 **코드로 만들어** 넣고, Input은 비워요.
+            3. 빈 칸이면 추가하지 않고 MessageToast "메모를 입력하세요" — 2초 동안, 화면 위쪽 가운데.
+            4. 5개가 차면 [추가] 버튼은 끌고 Input은 글자를 못 치게, Label `5 / 5`.
+            5. [모두 지우기]: 메모를 전부 없애고 다시 추가 가능 · `0 / 5` · 번호도 1부터.
+            6. 메모 개수를 따로 변수로 세지 말고, **VBox가 지금 가진 것**에서 알아내요.
+            -->
+    <VBox class="sapUiSmallMargin">
+        <Title text="W3 · 메모장"/>
+    
+        <HBox alignItems="Center">
+            <Input id="iMemo" width="20em" placeholder="메모"/>
+            <Button id="bMemoAdd" text="추가" press=".onPressAddMemo"/>
+            <Button text="모두 지우기" press=".onPressClearMemo"/>
+            <Label id="lMemoCount" text="0 / 5" class="sapUiSmallMarginBegin"/>
+        </HBox>
+    
+        <VBox id="vbMemo"/>
+    </VBox>
+
+
+
+
+        <!-- Input 초기화 예제 -->
+        <VBox class="sapUiSmallMargin" width="70%">
+            
+            <Toolbar>
+                <Title text="대여 접수" />
+                <ToolbarSpacer />
+                <Text text="전체 8건" />
+                <ToolbarSpacer />
+                <Button text="초기화" press=".onReset" />
+            </Toolbar>
+
+            <HBox alignItems="Center" class="sapUiSmallMarginTop">
+                <Label text="담당자" labelFor="contactInput" class="sapUiSmallMarginEnd" />
+                <Input id="contactInput" width="12rem" />
+            </HBox>
+        </VBox>
+
+
+
+        <VBox>
+            
+
+
+        </VBox>
+
+
+    </Page>
+
+</mvc:View>

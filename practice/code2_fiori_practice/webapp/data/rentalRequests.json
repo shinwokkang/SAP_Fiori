@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "Title": "교육장비 대여 현황"
+  },
+  "gt_request": [
+    {
+      "ReqId": "RQ001", "DeviceName": "프로젝터",
+      "Category": "AV",
+      "RoomId": "S101",
+      "Days": 2,
+      "Qty": 1,
+      "UnitFee": 15000,
+      "Curr": "KRW",
+      "Status": "대기",
+      "Contact": {
+        "Name": "김가람"
+      }
+    },
+    {
+      "ReqId": "RQ002",
+      "DeviceName": "노트북",
+      "Category": "IT",
+      "RoomId": "S101",
+      "Days": 1,
+      "Qty": 2,
+      "UnitFee": 25000,
+      "Curr": "KRW",
+      "Status": "승인",
+      "Contact": {
+        "Name": "이하늘"
+      }
+    },
+    {
+      "ReqId": "RQ003",
+      "DeviceName": "마이크",
+      "Category": "AV",
+      "RoomId": "S102",
+      "Days": 3,
+      "Qty": 2,
+      "UnitFee": 5000,
+      "Curr": "KRW",
+      "Status": "대기",
+      "Contact": {
+        "Name": "박다온"
+      }
+    },
+    {
+      "ReqId": "RQ004",
+      "DeviceName": "태블릿",
+      "Category": "IT",
+      "RoomId": "B201",
+      "Days": 2,
+      "Qty": 1,
+      "UnitFee": 12.5,
+      "Curr": "USD",
+      "Status": "승인",
+      "Contact": {
+        "Name": "최라온"
+      }
+    },
+    {
+      "ReqId": "RQ005",
+      "DeviceName": "프로젝터",
+      "Category": "AV",
+      "RoomId": "B201",
+      "Days": 1,
+      "Qty": 1,
+      "UnitFee": 15000,
+      "Curr": "KRW",
+      "Status": "취소",
+      "Contact": {
+        "Name": "정마루"
+      }
+    },
+    {
+      "ReqId": "RQ006",
+      "DeviceName": "노트북",
+      "Category": "IT",
+      "RoomId": "S102",
+      "Days": 4,
+      "Qty": 1,
+      "UnitFee": 25000,
+      "Curr": "KRW",
+      "Status": "승인",
+      "Contact": {
+        "Name": "한보람"
+      }
+    },
+    {
+      "ReqId": "RQ007",
+      "DeviceName": "태블릿",
+      "Category": "IT",
+      "RoomId": "S101",
+      "Days": 1,
+      "Qty": 3,
+      "UnitFee": 12.5,
+      "Curr": "USD",
+      "Status": "대기",
+      "Contact": {
+        "Name": "오새봄"
+      }
+    },
+    {
+      "ReqId": "RQ008",
+      "DeviceName": "마이크",
+      "Category": "AV",
+      "RoomId": "X999",
+      "Days": 2,
+      "Qty": 1,
+      "UnitFee": 5000,
+      "Curr": "KRW",
+      "Status": "승인",
+      "Contact": {
+        "Name": "윤여름"
+      }
+    }
+  ],
+  "gt_room": [
+    { "RoomId": "S101", "RoomName": "서울 101호" },
+    { "RoomId": "S102", "RoomName": "서울 102호" },
+    { "RoomId": "B201", "RoomName": "부산 201호" }
+  ]
+}

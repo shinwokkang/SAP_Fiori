@@ -1,0 +1,343 @@
+<mvc:View 
+    controllerName="code2.fiori.practice.edu01tablepractice.controller.edu01_Table_practice"
+    xmlns:t="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:l="sap/ui/core/library"
+    xmlns:m="sap.suite.ui.microchart"
+    xmlns="sap.m"
+    >
+
+    <Page id="page" title="{i18n>title}">
+    
+        <VBox class="sapUiSmallMargin">
+            <HBox alignItems="Center">
+                <Label text="상품명" width="8rem" />
+                <Input id="keyword" width="16rem" placeholder="부분 검색" />
+            </HBox>
+            
+            <HBox alignItems="Center">
+                <Label text="분류" width="8rem" />
+                <Input id="category" width="16rem" placeholder="빈칸 또는 문구/음료/간식" />
+            </HBox>
+            
+            <HBox>
+                <Button text="검색" press=".searchProducts" />
+                <Button text="전체 보기" press=".resetProducts" />
+            </HBox>
+            
+            <t:Table id="productTable" rows="{Sales>/gt_product}" selectionMode="None" width="100%">
+            <t:columns>
+                <t:Column>
+                    <t:label>
+                        <Label text="상품코드" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Code}" />
+                        </t:template>
+                    </t:Column>
+                    
+                <t:Column>
+                    <t:label>
+                        <Label text="상품명" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Name}" />
+                        </t:template>
+                    </t:Column>
+
+                <t:Column>
+                    <t:label>  
+                        <Label text="분류" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Category}" />
+                    </t:template>
+                </t:Column>
+             
+                <t:Column>
+                    <t:label>
+                        <Label text="단가" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Price}" />
+                    </t:template>
+                </t:Column>
+             
+                <t:Column>
+                    <t:label>   
+                         <Label text="재고" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Stock}" />
+                    </t:template>
+                </t:Column>
+            
+            </t:columns>
+            
+            </t:Table>
+        </VBox>
+
+
+
+
+
+
+
+
+
+        <VBox class="sapUiSmallMargin">
+            <HBox alignItems="Center">
+                <Label text="할인율" width="8rem" />
+                <Input id="discountRate" width="16rem" placeholder="부분 검색" />
+            </HBox>
+            
+            <HBox>
+                <Button text="할인 적용" press=".applyDiscount" />
+                <Button text="원래 가격" press=".resetDiscount" />
+            </HBox>
+            
+            <t:Table id="productTable2" rows="{Sales>/gt_product}" selectionMode="None" width="100%">
+            <t:columns>
+                <t:Column>
+                    <t:label>
+                        <Label text="상품코드" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Code}" />
+                        </t:template>
+                    </t:Column>
+                    
+                <t:Column>
+                    <t:label>
+                        <Label text="상품명" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Name}" />
+                        </t:template>
+                    </t:Column>
+
+                <t:Column>
+                    <t:label>  
+                        <Label text="분류" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Category}" />
+                    </t:template>
+                </t:Column>
+             
+                <t:Column>
+                    <t:label>
+                        <Label text="단가" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Price}" />
+                    </t:template>
+                </t:Column>
+
+                <t:Column>
+                    <t:label>
+                        <Label text="할인 단가" />
+                    </t:label>
+                    <t:template>
+                        <Text   id="slaePrice"
+                                text="{Sales>SalePrice}" />
+                    </t:template>
+                </t:Column>
+             
+                <t:Column>
+                    <t:label>   
+                         <Label text="재고" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Stock}" />
+                    </t:template>
+                </t:Column>
+            
+            </t:columns>
+            
+            </t:Table>
+        </VBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <VBox class="sapUiSmallMargin">
+        <HBox>
+	        <Button text="전체 집계" press=".showAllSales" />
+	        <Button text="결제 완료만" press=".showPaidSales" />
+	    
+            <Button text="전체 집계" press=".showAllSales2(false)" />
+	        <Button text="결제 완료만" press=".showAllSales2(true)" />
+        </HBox>
+        <HBox alignItems="Center">
+	        <Label text="판매 수량 / 매출 합계" width="8rem" />
+	        <HBox>
+		        <Text id="qty" text="0개" />
+		        <Text text=" / " />
+		        <Text id="total" text="0원" />
+		       </HBox>
+		    </HBox>
+        <!-- <VBox width="30rem" height="12rem">
+          <m:InteractiveBarChart bars="{Sales>/gt_chart}" displayedBars="3" selectionEnabled="false">
+            <m:bars>
+	            <m:InteractiveBarChartBar label="{Sales>Category}" value="{Sales>Qty}" displayedValue="{Sales>Qty}개" />
+	          </m:bars>
+          </m:InteractiveBarChart>
+        </VBox> -->
+
+        <FlexBox>
+            <items>
+				<m:InteractiveBarChart  id="salesChart"
+                                        bars="{Sales>/gt_chart}" 
+                                        displayedBars="3" labelWidth="25%" >
+					<m:bars>
+						<!-- <m:InteractiveBarChartBar label="{Class}"     value="{StdCount}" displayedValue="{StdCount} 명"/>
+						<m:InteractiveBarChartBar label="Product 2" value="20" displayedValue="20%"/>
+						<m:InteractiveBarChartBar label="Product 3" value="30" displayedValue="30%"/>
+						<m:InteractiveBarChartBar label="Product 4" value="40" displayedValue="40%"/> -->
+						
+                        <m:InteractiveBarChartBar label="{Sales>Category}" value="{Sales>Qty}" displayedValue="{Sales>Qty} 개"/>
+
+					</m:bars>
+				</m:InteractiveBarChart>
+            </items>
+        
+        </FlexBox>
+      </VBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <VBox class="sapUiSmallMargin">
+            <HBox alignItems="Center">
+                <Label text="상품 코드" width="8rem" />
+                <Input  id="productCode"
+                        width="16rem" placeholder="예: P100" />
+            </HBox>
+            <HBox alignItems="Center">
+                <Label text="주문 수량" width="8rem" />
+                <Input  id="productQty"
+                        width="16rem" placeholder="1~10" />
+            </HBox>
+            
+            <HBox>
+                <Button text="담기" press=".addToCart" />
+                <Button text="주문 초기화" press=".clearCart" />
+            </HBox>
+            
+            <t:Table id="productTable3" 
+                     rows="{Sales>/gt_product}" selectionMode="None" width="100%">
+            <t:columns>
+                <t:Column>
+                    <t:label>
+                        <Label text="상품코드" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Code}" />
+                        </t:template>
+                    </t:Column>
+                    
+                <t:Column>
+                    <t:label>
+                        <Label text="상품명" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Name}" />
+                        </t:template>
+                    </t:Column>
+
+                <t:Column>
+                    <t:label>  
+                        <Label text="단가" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Price}" />
+                    </t:template>
+                </t:Column>
+             
+                <t:Column>
+                    <t:label>
+                        <Label text="주문수량" />
+                    </t:label>
+                    <t:template>
+                        <Text text="{Sales>Stock}" />
+                    </t:template>
+                </t:Column>
+
+                <t:Column>
+                    <t:label>
+                        <Label text="금액" />
+                    </t:label>
+                    <t:template>
+                        <Text   
+                                text="{Sales>SalePrice}" />
+                    </t:template>
+                </t:Column>
+             
+            
+            </t:columns>
+            
+            </t:Table>
+
+
+        <HBox alignItems="Center">
+	        <Label text="판매 수량 / 매출 합계" width="8rem" />
+	        <HBox>
+		        <Text text="0개" />
+		        <Text text=" / " />
+		        <Text text="0원" />
+		       </HBox>
+		    </HBox>
+
+        <FlexBox>
+            <items>
+				<m:InteractiveBarChart  
+                                        bars="{Sales>/gt_chart}" 
+                                        displayedBars="3" labelWidth="25%" >
+					<m:bars>
+						<!-- <m:InteractiveBarChartBar label="{Class}"     value="{StdCount}" displayedValue="{StdCount} 명"/>
+						<m:InteractiveBarChartBar label="Product 2" value="20" displayedValue="20%"/>
+						<m:InteractiveBarChartBar label="Product 3" value="30" displayedValue="30%"/>
+						<m:InteractiveBarChartBar label="Product 4" value="40" displayedValue="40%"/> -->
+						
+                        <m:InteractiveBarChartBar label="{Sales>Category}" value="{Sales>Qty}" displayedValue="{Sales>Qty} 개"/>
+
+					</m:bars>
+				</m:InteractiveBarChart>
+            </items>
+        
+        </FlexBox>
+        </VBox>
+
+
+
+
+    </Page>
+
+</mvc:View>
