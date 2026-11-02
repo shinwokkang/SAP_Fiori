@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Sun Nov 01 2026 12:55:17 GMT+0900 (한국 표준시)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "None",
+    "metadataFilename": "",
+    "serviceUrl": "N/A",
+    "appName": "edu01practice",
+    "appTitle": "Edu01ViewPractice",
+    "appDescription": "edu01practice",
+    "appNamespace": "code2.fiori.practice",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.52",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": false,
+    "generatorVersion": "1.34.0",
+    "template": "Basic",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

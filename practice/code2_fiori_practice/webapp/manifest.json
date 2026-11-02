@@ -1,0 +1,98 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "code2.fiori.pratice.code2fioripractice",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.34.0",
+      "toolsId": "e66198cc-261c-405e-96b0-5bf41267318b"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.52",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "code2.fiori.pratice.code2fioripractice.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "code2.fiori.pratice.code2fioripractice.view",
+        "async": true,
+        "viewPath": "code2.fiori.pratice.code2fioripractice.view"
+      },
+      "routes": [
+        {
+          "name": "RoutepraticeFiori",
+          "pattern": ":?query:",
+          "target": [
+            "TargetpraticeFiori"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetpraticeFiori": {
+          "id": "praticeFiori",
+          "name": "praticeFiori"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "code2.fiori.pratice.code2fioripractice.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

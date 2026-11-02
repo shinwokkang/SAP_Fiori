@@ -1,0 +1,14 @@
+{
+  "gt_material": [
+    { "Matnr": "STEEL_01",  "Maktx": "Steel Plate",    "Mtart": "ROH",  "Werks": "1010", "Menge": 120,  "Netprice": 25000,   "Curr": "KRW" },
+    { "Matnr": "STEEL_02",  "Maktx": "Steel Bar",      "Mtart": "ROH",  "Werks": "1020", "Menge": 35,   "Netprice": 18000,   "Curr": "KRW" },
+    { "Matnr": "AL_100",    "Maktx": "Aluminum Stick", "Mtart": "ROH",  "Werks": "1030", "Menge": 80,   "Netprice": 12.5,    "Curr": "USD" },
+    { "Matnr": "BOLT_M8",   "Maktx": "Bolt M8",        "Mtart": "HALB", "Werks": "1010", "Menge": 900,  "Netprice": 150,     "Curr": "KRW" },
+    { "Matnr": "GEAR_20",   "Maktx": "Gear 20T",       "Mtart": "HALB", "Werks": "1020", "Menge": 45,   "Netprice": 32.75,   "Curr": "USD" },
+    { "Matnr": "MOTOR_A",   "Maktx": "Motor A",        "Mtart": "FERT", "Werks": "1010", "Menge": 12,   "Netprice": 450,     "Curr": "EUR" },
+    { "Matnr": "PUMP_X",    "Maktx": "Pump X",         "Mtart": "FERT", "Werks": "1030", "Menge": 8,    "Netprice": 1250000, "Curr": "KRW" },
+    { "Matnr": "CABLE_5",   "Maktx": "Cable 5m",       "Mtart": "HAWA", "Werks": "1020", "Menge": 300,  "Netprice": 4.25,    "Curr": "USD" },
+    { "Matnr": "GLOVE_L",   "Maktx": "Work Glove L",   "Mtart": "HAWA", "Werks": "1010", "Menge": 60,   "Netprice": 3500,    "Curr": "KRW" },
+    { "Matnr": "PANEL_S",   "Maktx": "Solar Panel",    "Mtart": "FERT", "Werks": "1040", "Menge": 25,   "Netprice": 980,     "Curr": "EUR" }
+  ]
+}

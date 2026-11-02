@@ -1,0 +1,16 @@
+{
+    "gt_sale": [
+            {"OrderId": "O01","Category": "문구","Qty": 2,"Price": 2000,"Paid": true},
+            {"OrderId": "O02","Category": "음료","Qty": 1,"Price": 3000,"Paid": true},
+            {"OrderId": "O03","Category": "문구","Qty": 3,"Price": 1000,"Paid": false},
+            {"OrderId": "O04","Category": "간식","Qty": 4,"Price": 2500,"Paid": true},
+            {"OrderId": "O05","Category": "음료","Qty": 2,"Price": 1500,"Paid": false},
+            {"OrderId": "O06","Category": "간식","Qty": 1,"Price": 1000,"Paid": true}
+            ],
+
+    "gt_chart": [
+            {"Category": "문구","Qty": 0},
+            {"Category": "음료","Qty": 0},
+            {"Category": "간식","Qty": 0}
+            ]       
+}

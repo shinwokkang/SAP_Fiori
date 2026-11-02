@@ -1,0 +1,347 @@
+<mvc:View controllerName="code2.fiori.practice.edu01practice.controller.Edu01View_Practice"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+        <VBox>
+                <Text text="안내 문구와 알림 버튼" textAlign="Center"/>
+                <Label text="버튼 클릭과 이벤트 연습" design="Bold"/>
+
+                <HBox>
+                    <Button text="Airline" enabled="false" icon="sap-icon://travel-itinerary" />
+                    <Button id="showNameButton"
+                            text="내 이름" width="100px" icon="sap-icon://bell" 
+                            press=".showName"/>
+                    <Button id="settingButton"
+                            text="설정" enabled="true" width="15rem" icon="sap-icon://action-settings"
+                            press=".finishSetting" />                
+                
+                </HBox>
+        </VBox>
+
+
+        <VBox>
+            <Text text="이름을 받아 인사 문구 만들기" textAlign="Center"/>
+            <Label text="이름 받아서 값 변경하는 이벤트 연습" design="Bold"/>
+            <HBox>
+            
+                <Label text="이름"/>
+                <ToolbarSpacer width="16rem" />
+                <Input  id="nameInput"
+                        placeholder="이름 입력"/>
+            </HBox>
+
+            <HBox>
+                <Button text="확인" press=".showGreeting"/>
+                <Button text="초기화" press=".clearGreeting"/>
+            </HBox>
+
+            <HBox>
+                <Label text="결과"/>
+                <ToolbarSpacer width="16rem" />
+                <Text   id="textResult"
+                        text="입력 대기"/>
+            </HBox>
+        
+        </VBox>
+
+
+
+        <VBox>
+            <Text text="간식 주문 금액 계산" textAlign="Center"/>
+            <Label text="값 넣고 타입 변경해서 계산하기 연습" design="Bold"/>        
+            <HBox alignItems="Center">
+                <Label text="한 개 가격" width="8em"/>
+                <Input  id="price"
+                        width="16em" type="Number"/>
+            </HBox>
+
+            <HBox alignItems="Center">
+                <Label text="수량" width="8em"/>
+                <Input  id="qty"
+                        width="16em" type="Number"/>            
+            </HBox>
+            <HBox alignItems="Center">
+                <Label text="포장비" width="8em"/>
+                <Input  id="packing"
+                        width="16em" type="Number"/>            
+            </HBox>
+            <HBox alignItems="Center">
+                <Label text="결제 금액" width="8em"/>
+                <Input  id="total"
+                        enabled="false" width="16em" type="Number"/>            
+            </HBox>       
+
+            <Button text="계산" press=".calcOrder"/> 
+        </VBox>
+
+
+        <VBox>
+            <Text text="직사각형 넓이와 둘레 구하기" textAlign="Center"/>
+            <Label text="값 넣고 타입 변경해서 계산하기 연습" design="Bold"/>        
+
+            <HBox alignItems="Center">
+                <Label text="가로" width="8em"/>
+                <Input id="width" width="16em"/>
+            </HBox>
+            
+            <HBox alignItems="Center">
+                <Label text="세로" width="8em"/>
+                <Input id="height" width="16em"/>
+            </HBox>
+
+            <HBox alignItems="Center">
+                <Label text="넓이" width="8em"/>
+                <Input  id="area"
+                        enabled="false" width="16em"/>
+            </HBox>
+            
+            <HBox alignItems="Center">
+                <Label text="둘레" width="8em"/>
+                <Input  id="perimeter"
+                        enabled="false" width="16em"/>
+            </HBox>
+            
+            <HBox alignItems="Center">
+                <Button text="계산" 
+                        press=".calcRectangle"/>
+                <Button text="초기화"
+                        press=".clearRectangle"/>
+            </HBox>
+        </VBox>
+
+
+
+        <VBox>
+            <Text text="입력한 문구와 정렬 바꾸기" textAlign="Center"/>
+            <Label text="값 넣고 타입 변경해서 계산하기 연습" design="Bold"/>                
+        
+            <HBox alignItems="Center">
+                <Label text="새 문구" width="8em"/>
+                <Input  id="messageInput"
+                        width="16em"/>
+            </HBox>
+
+            <Button text="문구 적용" 
+                    press="applyMessage"/>
+            
+            <Text   id="messageText"
+                    text="연습을 시작합니다." width="20em" textAlign="Left"/>
+            
+            <HBox>
+                <Button text="왼쪽"
+                        press="alignLeft"/>
+                <Button text="가운데"
+                        press="alignCenter"/>
+                <Button text="오른쪽"
+                        press="alignRight"/>
+            </HBox>            
+        </VBox>
+
+
+
+        <VBox>
+            <Text text="무료 배송 조건 계산" textAlign="Center"/>
+            <Label text="값 넣고 타입 변경해서 계산하기 연습" design="Bold"/>                        
+        
+            <HBox alignItems="Center">
+                <Label text="상품 금액" width="8em"/>
+                <Input  id="amount"
+                        width="16em" />
+            </HBox>
+
+            <Button text="계산" width="8em"
+                    press=".calcDelivery"/>
+            
+            <HBox alignItems="Center">
+                <Label text="배송비" width="8em"/>
+                <Input  id="delivery"
+                        value="0원" enabled="false" width="16em"/>
+            </HBox>
+
+            <HBox alignItems="Center">
+                <Label text="최종 금액" width="8em"/>
+                <Input  id="totalPrice"
+                        value="0원" enabled="false" width="16em"/>
+            </HBox>        
+
+        </VBox>
+
+        <VBox>
+            <Text text="입실 가능한 강의실 찾기" textAlign="Center"/>
+            <Label text="값 넣고 타입 변경해서 계산하기 연습" design="Bold"/>                
+
+            <HBox alignItems="Center">
+                <Label text="강의실 번호" width="8em"/>
+                <Input  id="roomNumber"
+                        width="16em" placeholder="예: 101"/>
+            </HBox>   
+
+            <Button text="확인"
+                    press=".checkRoom"/>
+
+            <HBox alignItems="Center">
+                <Label text="결과" width="8em"/>
+                <Input  id="roomResult"
+                        width="16em" value="확인 전" enabled="false"/>
+            </HBox>             
+        </VBox>
+
+
+        <VBox>
+            <HBox alignItems="Center">
+                <Label text="국어" width="8em"/>
+                <Input  id="korean"
+                        width="16em"/>
+            </HBox> 
+
+            <HBox alignItems="Center">
+                <Label text="영어" width="8em"/>
+                <Input  id="english"
+                        width="16em" />
+            </HBox> 
+
+            <HBox alignItems="Center">
+                <Label text="수학" width="8em"/>
+                <Input  id="math"
+                        width="16em" />
+            </HBox> 
+
+            <Button text="성적 계산"
+                    press=".calcScore"/>
+
+            <HBox alignItems="Center">
+                <Label text="합계 / 평균 / 등급 " width="8em"/>
+                <HBox>
+                    <Text id="sum" text="0"/>
+                    <Text text=" / "/>
+                    <Text id="avg" text="0"/>
+                    <Text text=" / "/>
+                    <Text id="grade" text="-"/>
+                </HBox>
+                
+            </HBox> 
+        </VBox>
+
+
+        <VBox>
+            <HBox alignItems="Center">
+                <Label text="끝 숫자" width="8em"/>
+                <Input  id="limit"
+                        width="16em" placeholder="1~30"/>
+            </HBox> 
+
+            <HBox alignItems="Center">
+                <Label text="배수 기준" width="8em"/>
+                <Input  id="multiple"
+                        width="16em" placeholder="1~10"/>
+            </HBox> 
+
+            <Button text="출력"
+                    press=".printMultiples"/>
+
+            <HBox alignItems="Center">
+                <Label text="목록" width="8em"/>
+                <Text   id="numbers1"
+                        text="="/>
+            </HBox> 
+
+            <HBox alignItems="Center">
+                <Label text="개수 / 합계" width="8em"/>
+                <HBox>
+                    <Text   id="count"
+                            text="0"/>
+                    <Text text=" / "/>
+                    <Text   id="sum1"
+                            text="0"/>
+                </HBox>
+            </HBox> 
+        
+        </VBox>
+
+
+        <VBox>
+            <Button text="Get Members" press=".showMembers"/>
+            <HBox alignItems="Center">
+                <Label text="회원이름" width="8em"/>
+                <Text   id="names"
+                        text="-"/>
+            </HBox> 
+            <HBox alignItems="Center">
+                <Label text="전체 회원 / 사용 회원" width="8em"/>
+                <HBox>
+                    <Text   id="countMember"
+                            text="0명"/>
+                    <Text text=" / "/>
+                    <Text   id="acticeMember"
+                            text="0명"/>                
+                </HBox>
+            </HBox> 
+        </VBox>
+
+        <VBox>
+            <HBox alignItems="Center">
+                <Label text="회원 ID" width="8em"/>
+                <Input  id="memberIdInput"
+                        placeholder="예: LIM"/>
+            </HBox> 
+
+            <Button text="조회" press=".findMember"/>
+            
+            <HBox alignItems="Center">
+                <Label text="이름" width="8em"/>
+                <Text   id="names1"
+                        text="-"/>
+            </HBox> 
+
+            <HBox alignItems="Center">
+                <Label text="나이" width="8em"/>
+                <Text   id="age1"
+                        text="-"/>
+            </HBox> 
+            
+            <HBox alignItems="Center">
+                <Label text="사용 여부" width="8em"/>
+                <Text   id="use1"
+                        text="-"/>
+            </HBox> 
+            
+            <HBox alignItems="Center">
+                <Text   id="message1"
+                        text="-" width="8em"/>
+            </HBox> 
+        
+        </VBox>
+<!-- 
+        <VBox>
+            <HBox alignItems="Center">
+                <Label text="성별" width="8em"/>
+                <Input  id="gender"
+                        placeholder="전체 / M / F"/>
+            </HBox> 
+
+            <HBox alignItems="Center">
+                <Label text="최소 나이" width="8em"/>
+                <Input  id="minAge"
+                        placeholder="0~100"/>
+            </HBox> 
+
+            <Button text="검색" press=".searchMembers"/>
+            <Button text="초기화" press="resetMembers"/>
+
+            <HBox alignItems="Center">
+                <Label text="검색된 이름" width="8em"/>
+                <Text   id="searchName"
+                        text="-"/>
+            </HBox> 
+    
+            <HBox alignItems="Center">
+                <Label text="검색 건수" width="8em"/>
+                <Text   id="searchCount"
+                        text="-"/>
+            </HBox> 
+
+        </VBox> -->
+
+    </Page>
+</mvc:View>

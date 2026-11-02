@@ -21,6 +21,7 @@ sap.ui.define([
                              };
 
             this.getView().setModel(new JSONModel(oChartData));
+
         },
 
     });

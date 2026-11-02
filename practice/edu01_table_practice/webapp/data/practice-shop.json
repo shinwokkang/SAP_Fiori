@@ -1,0 +1,16 @@
+{
+  "gt_product": [
+    { "Code": "P100", "Name": "노트",  "Category": "문구", "Price": 2000, "Stock": 8,  "SalePrice": 2000},
+    { "Code": "P200", "Name": "볼펜",  "Category": "문구", "Price": 1000, "Stock": 15, "SalePrice": 1000},
+    { "Code": "P300", "Name": "생수",  "Category": "음료", "Price": 1500, "Stock": 6,  "SalePrice": 1500},
+    { "Code": "P400", "Name": "녹차",  "Category": "음료", "Price": 3000, "Stock": 4,  "SalePrice": 3000},
+    { "Code": "P500", "Name": "쿠키",  "Category": "간식", "Price": 2500, "Stock": 5,  "SalePrice": 2500},
+    { "Code": "P600", "Name": "초코바", "Category": "간식", "Price": 1000, "Stock": 0,  "SalePrice": 1000}
+  ],
+  "gt_cart": [],
+  "gt_chart": [
+    { "Category": "문구", "Qty": 0 },
+    { "Category": "음료", "Qty": 0 },
+    { "Category": "간식", "Qty": 0 }
+  ]
+}
