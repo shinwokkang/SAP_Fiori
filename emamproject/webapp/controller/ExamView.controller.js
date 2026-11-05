@@ -99,7 +99,7 @@ sap.ui.define([
             }
 
             if ( !lb_check ){
-                msg = "No Match"
+                msg = "No Match";
                 MessageToast.show(msg, {
                     duration: 2,
                     width: "30rem",
@@ -115,6 +115,7 @@ sap.ui.define([
             {
                 for ( let j = 1 ; j <= 9 ; j++ )
                 {
+                    // eslint-disable-next-line no-console
                     console.log(i +" * " + j + " = " + i*j);
                 }
             }
@@ -128,6 +129,7 @@ sap.ui.define([
                 let j = 1;
                 while ( j <= 9 )
                 {
+                    // eslint-disable-next-line no-console
                     console.log(i +" * " + j + " = " + i*j);
                     j++;
                 }
@@ -142,6 +144,7 @@ sap.ui.define([
                 let j = 1;
                 while ( j <= 9 )
                 {
+                    // eslint-disable-next-line no-console
                     console.log(i +" * " + j + " = " + i*j);
                     j++;
                 }
@@ -152,14 +155,20 @@ sap.ui.define([
         {
             let dan = 2;
 
+            // ✏️ 고침(11/5): 같은 controller의 함수는 this.로 불러야 해요 (없으면 'ongugudanUseFor is not defined' 오류).
+            //    View가 .onguguDan(1)처럼 숫자를 넘겨서 case도 숫자 1로 맞췄고, 다음 case로 흘러가지 않게 break를 넣었어요.
+            //    내 코드: case "1": ongugudanUseFor();  case 2: ongugudanUseWhile();  case 3: ongugudanUseForWhile();  (break 없음)
             switch (Number)
             {
-                case "1":
-                    ongugudanUseFor();
+                case 1:
+                    this.ongugudanUseFor();
+                    break;
                 case 2:
-                    ongugudanUseWhile();
+                    this.ongugudanUseWhile();
+                    break;
                 case 3:
-                    ongugudanUseForWhile();
+                    this.ongugudanUseForWhile();
+                    break;
             }
         }
 
