@@ -135,7 +135,7 @@ sap.ui.define([
             }
 
             if ( !lb_check ){                   // 순회를 다 마쳤는데에도 lb_check 변수가 false라면, 일치하지 않음을 나타낸다.
-                vmsg = "No Match"               // 일치하지 않는다면 msg를 "No Match"로 두고 MessageToast를 나타낸다.
+                vmsg = "No Match";              // 일치하지 않는다면 msg를 "No Match"로 두고 MessageToast를 나타낸다.
                 sap.m.MessageToast.show(vmsg);
             }
         },
@@ -147,6 +147,7 @@ sap.ui.define([
             {
                 for ( let vNum = 1 ; vNum <= 9 ; vNum++ )
                 {
+                    // eslint-disable-next-line no-console
                     console.log(vDan +" * " + vNum + " = " + vDan*vNum);
                 }
             }
@@ -160,6 +161,7 @@ sap.ui.define([
                 let vNum = 1;
                 while ( vNum <= 9 )
                 {
+                    // eslint-disable-next-line no-console
                     console.log(vDan +" * " + vNum + " = " + vDan*vNum);
                     vNum++;
                 }
@@ -174,6 +176,7 @@ sap.ui.define([
                 let vNum = 1;
                 while ( vNum <= 9 )
                 {
+                    // eslint-disable-next-line no-console
                     console.log(vDan +" * " + vNum + " = " + vDan*vNum);
                     vNum++;
                 }

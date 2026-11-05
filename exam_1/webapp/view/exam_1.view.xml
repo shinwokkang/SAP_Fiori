@@ -42,8 +42,9 @@
 
 
         <!-- 4번 문제 -->
+        <!-- ✏️ 고침(11/5): width 경로의 오타(widtrh)로 넓이가 안 들어갔어요. 내 코드: width="{Msg>/InputInfor/widtrh}" -->
         <Input  value="{Msg>/InputInfor/value}"
-                width="{Msg>/InputInfor/widtrh}"
+                width="{Msg>/InputInfor/width}"
                 description="{Msg>/InputInfor/description}"/>
 
 
