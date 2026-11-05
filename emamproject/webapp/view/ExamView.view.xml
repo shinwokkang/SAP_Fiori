@@ -1,0 +1,171 @@
+<mvc:View 
+    controllerName="code2.fiori.exam.emamproject.controller.ExamView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        
+        <!-- 1번 문제 -->
+        <VBox>
+            <HBox alignItems="Center">
+                <Label text="1. Input을 생성하고 아래와 같이 나타나도록 할것" width="8rem" />            
+            </HBox>
+
+            <Input  width="{Fi1>/inputCss/width}"
+                    placeholder="{Fi1>/inputCss/placeholder}"/>
+            <Input  width="{Fi2>/inputCss/width}"
+                    placeholder="{Fi2>/inputCss/placeholder}"/>
+
+            <!-- <Label text="{Label>/LabelCss/text}"/> -->
+            <Label text="{Label>/LabelText}"/>
+        </VBox>
+
+
+
+
+
+        <!-- 2번 문제 -->
+        <VBox>
+            <Text   text="CODE2 First Test of Shinwook Kang"
+                    width="{Msg>/TextInfor/width}" textAlign="Center"/>
+            <Label  text="ShinwookKang Fiori 시험중"
+                    design="{Msg>/LabelInfor/design}" 
+            />
+            <Input  value="{Msg>/InputInfor/value}"
+                    width="{Msg>/InputInfor/width}"
+                    description="{Msg>/InputInfor/description}" />
+        </VBox>
+
+
+        <!-- 3번 문제 -->
+        <!-- 3. msg 폴더 생성 후 msg.json 파일 생성할 것 -->
+        <!-- Vbox 태그 안에 아래의 화면을 만들 것
+            
+            Text 태그 만들고 text는 "CODE2 First Test of 본인이름" 
+            textAlign은 Center
+            Label 태그 만들고 text는 "본인이름 Fiori 시험중"
+            -> JSON Model 에서
+            
+            width는 300px,
+            design은 Bold
+            -> msg.json 에서 
+            
+            -->
+        <VBox>
+            <Text   text="{/TextInfor/text}"
+                    width="{Msg>/TextInfor/width}" textAlign="{/TextInfor/textAlign}"/>
+            <Label  text="{/LabelInfor/text}"
+                    design="{Msg>/LabelInfor/design}" 
+            />
+        </VBox>
+
+
+
+
+
+        <!-- 5번 문제 -->
+        <Button text="Confirm" width="150px" icon="sap-icon://verified"/>
+        <Button text="Check" width="200px" enabled="false"/>
+
+
+        <!-- 6번 문제 -->
+        <!-- controller 에서 셋팅이 뭘까 ?-->
+        <VBox>
+            <Input  value="입력 필드"
+                    description="'Input field"
+                    maxLength="20"
+                    width="300px"/>
+            <Input  width="300px"
+                    maxLength="10"/>
+        </VBox> 
+
+
+
+        <!-- 7. 삼각형의 면적을 구하는 화면 구성 할것 -->
+        <VBox >
+            <HBox alignItems="Center">
+                <Label text="밑변" width="2rem"/>
+                <Input  id="iBase"
+                        width="6em"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <HBox alignItems="Center">
+                <Label text="높이" width="2rem"/>
+                <Input id="iWidth"
+                        width="6em"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <HBox>
+                <Label text="면적" width="2rem"/>
+                <Input  id = "iResult"
+                        width="6em"
+                        enabled="false"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <Button text="계산"
+                    press=".onTriCal"/>
+        </VBox>    
+
+
+
+        <!-- 8. 할인율 구하기 
+            원 가격을 입력 하고 할인된 가격을 입력하면 할인율을 계산해서 값을 세팅할것
+        -->
+        <VBox >
+
+            <HBox alignItems="Center">
+                <Label text="원 가격" width="5rem"/>
+                <Input  id="iProductPrice"
+                        width="6em"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <HBox alignItems="Center">
+                <Label text="할인된 가격" width="5rem"/>
+                <Input id="iDiscountPrice"
+                        width="6em"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <HBox>
+                <Label text="할인율" width="5rem"/>
+                <Input  id = "iDiscountRate"
+                        width="6em"
+                        enabled="false"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <Button text="계산"
+                    press=".onRateToPrice"/>
+        </VBox>    
+
+
+        <!-- 9. View에 아래의 Label 과 Input 과 버튼을 생성할것 -->
+        <VBox>
+            <HBox alignItems="Center">
+                <Label text="Country" width="5rem"/>
+                <Input  id="iCountry"
+                        width="6em"
+                        showClearIcon="true"/>
+            </HBox>
+
+            <Button text="Country 체크"
+                    press=".onCheckCountry"/>
+        </VBox>
+
+
+        <!-- 10. 아래의 버튼을 만들고 버튼의 텍스트처럼 해당 반복문을 사용하여 console.log로 구구단을 찍을것 2단 ~ 9단 -->
+        <VBox>
+            <HBox >
+                <Button text="for 구문"
+                        press=".onguguDan(1)"/>
+                <Button text="while 구문"
+                        press=".onguguDan(2)"/>
+                <Button text="for + while 구문"
+                        press=".onguguDan(3)"/>
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>
