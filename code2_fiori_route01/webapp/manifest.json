@@ -1,0 +1,131 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "code2.fiori.route01.code2fioriroute01",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.33.0",
+      "toolsId": "19d28575-3922-4668-b079-f19cfae7ef4c"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.53",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "code2.fiori.route01.code2fioriroute01.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "code2.fiori.route01.code2fioriroute01.view",
+        "async": true,
+        "viewPath": "code2.fiori.route01.code2fioriroute01.view"
+      },
+      "routes": [
+        {
+          "name": "RouteCenterView",
+          "pattern": ":?query:",
+          "target": [
+            "TargetCenterView"
+          ]
+        },
+        {
+          "name": "RouteLeftView",
+          "pattern": "LeftView",
+          "target": [
+            "TargetLeftView"
+          ]
+        },
+        {
+          "name": "RouteRightView",
+          "pattern": "RightView",
+          "target": [
+            "TargetRightView"
+          ]
+        }
+      ],
+
+
+
+      "targets": {
+        "TargetCenterView": {
+          "id": "CenterView",
+          "name": "CenterView",
+          "transition":"show"
+        },
+
+        "TargetLeftView" : {
+          "id": "LeftView",
+          "name": "LeftView",
+          "transition": "flip"
+        },
+
+        "TargetRightView" : {
+          "id": "RightView",
+          "name": "RightView",
+          "transition":"fade"
+        }
+      }
+    },
+
+
+
+    "rootView": {
+      "viewName": "code2.fiori.route01.code2fioriroute01.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

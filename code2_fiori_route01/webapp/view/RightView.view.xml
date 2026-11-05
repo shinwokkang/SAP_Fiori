@@ -1,0 +1,17 @@
+<mvc:View 
+    controllerName="code2.fiori.route01.code2fioriroute01.controller.RightView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page id="pageR" title="{i18n>title}">
+        <Text text="여기는 Right View 입니다."/>
+        <HBox>
+            <Button text="Center View 이동" press=".onCenter"/>    
+            <Button text="Left View 이동" press=".onLeft"/>    
+        </HBox>
+
+    </Page>
+
+
+
+</mvc:View>
