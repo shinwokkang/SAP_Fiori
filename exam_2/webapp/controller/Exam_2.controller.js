@@ -70,7 +70,7 @@ sap.ui.define([
                             { Bukrs: "4000", Gjahr : "2024", Anln1 : 19147 },
                             { Bukrs: "5000", Gjahr : "2024", Anln1 : 1421 }
                           ]
-            }
+            };
             this.getView().setModel(new JSONModel(oData), "companyGridSet");
 
             
@@ -90,6 +90,7 @@ sap.ui.define([
                 }
                 for ( let vNum = 1 ; vNum <= 9 ; vNum ++)   // 값이 일치하지 않는다면 console로 찍는다.
                 {
+                    // eslint-disable-next-line no-console
                     console.log( lv_Gugudan + " * " + vNum + " = " + lv_Gugudan * vNum );
                 }
             }
@@ -107,6 +108,7 @@ sap.ui.define([
                 {
                     if ( !lb_Twin )                         // lb_Twin 값이 0 == false == 짝수이고, 1 == true == 홀수이므로 !lb_Twin을 조건식으로 건다.
                     {
+                        // eslint-disable-next-line no-console
                         console.log( Dan + " * " + vNum + " = " + Dan * vNum);
                     } else{                                 // lb_Twin이 1 == 홀수 라면 출력하지 않고 continue 한다.
                         continue;
@@ -125,6 +127,7 @@ sap.ui.define([
             let lt_Baseball = this.getView().getModel("Baseball").oData.gt_aArray; 
 
             for (const ls_Baseball of lt_Baseball) {    // 배열에서 for-of 를 통해서 각각의 JSON 형식 {} 객체를 가져온다.
+                // eslint-disable-next-line no-console
                 console.log(ls_Baseball);               // 배열 내 JSon객체들을 for 문으로 출력한다.
             }
         },
