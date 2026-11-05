@@ -1,0 +1,13 @@
+{
+  "TextInfor": { 
+      "width"   : "300px"
+              },
+    "LabelInfor" :{
+        "design" : "Bold"
+    },
+    "InputInfor" : {
+        "value" : "코드 2기 1반 Best",
+        "width" : "30rem",
+        "description" : "Class 1 is best of best"
+    }
+}
